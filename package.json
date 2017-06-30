@@ -1,14 +1,28 @@
 {
-  "name": "fractal",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@frctl/fractal": "^1.1.4"
-  }
+    "name": "fractal",
+    "version": "1.0.0",
+    "description": "",
+    "engines": {
+        "npm": ">=5",
+        "node": ">=6.11.0"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prebuild": "del-cli dist -f",
+        "build": "webpack",
+        "execute": "node dist/bundle.js",
+        "start": "npm run build -s && npm run execute -s"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@frctl/fractal": "^1.1.4",
+        "gulp": "gulpjs/gulp#4.0",
+        "lodash": "^4.17.4"
+    },
+    "devDependencies": {
+        "del-cli": "^1.1.0",
+        "webpack": "^3.0.0"
+    }
 }
