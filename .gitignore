@@ -9,6 +9,7 @@ npm-debug.log
 node_modules
 build
 _backup
+dist
 
 #
 # Ignore OS specific system files (Thumbs.db, .DS_Store, etc.)
