@@ -11,8 +11,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "prebuild": "del-cli dist -f",
         "build": "webpack",
-        "execute": "node dist/bundle.js",
-        "start": "npm run build -s && npm run execute -s"
+        "execute": "node dist/javascript/bundle.js",
+        "start": "npm run build -s && npm run execute -s",
+        "watch": "webpack --watch"
     },
     "author": "",
     "license": "ISC",

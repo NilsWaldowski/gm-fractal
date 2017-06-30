@@ -24,6 +24,11 @@ fractal.components.set('default.preview', '@preview');
 // build
 fractal.web.set('builder.dest', __dirname + '/build');
 
+/*
+* Assets
+*/
+fractal.web.set('static.path', __dirname + '/dist');
+
 module.exports = {
     fractal: fractal,
     logger: logger
