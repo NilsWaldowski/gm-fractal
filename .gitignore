@@ -10,6 +10,7 @@ node_modules
 build
 _backup
 dist
+public
 
 #
 # Ignore OS specific system files (Thumbs.db, .DS_Store, etc.)
