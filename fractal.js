@@ -1,5 +1,3 @@
-'use strict';
-
 /* Create a new Fractal instance and export it for use elsewhere if required */
 const fractal = module.exports = require('@frctl/fractal').create();
 
@@ -27,7 +25,7 @@ fractal.web.set('builder.dest', __dirname + '/build');
 /*
 * Assets
 */
-fractal.web.set('static.path', __dirname + '/dist');
+fractal.web.set('static.path', __dirname + '/public');
 
 module.exports = {
     fractal: fractal,

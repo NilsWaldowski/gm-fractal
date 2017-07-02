@@ -1,0 +1,29 @@
+{
+    "src": "./01-src",
+    "dist": "./public",
+
+    "stylesheets": {
+        "src": "stylesheets",
+        "dist": "stylesheets"
+    },
+    "javascript": {
+        "src": "javascript",
+        "dist": "javascript"
+    },
+    "images": {
+        "src": "images",
+        "dist": "images"
+    },
+    "icons": {
+        "src": "icons",
+        "dist": "icons"
+    },
+    "fonts": {
+        "src": "fonts",
+        "dist": "fonts"
+    },
+    "misc": {
+        "src": "misc",
+        "dist": "misc"
+    }
+}

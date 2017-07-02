@@ -1,0 +1,30 @@
+{
+    "stylesheets": {
+
+        "autoprefixer": {
+            "browsers": [
+                "> 1% in DE",
+                "Android >= 4.1",
+                "Explorer >= 9",
+                "Firefox >= 17",
+                "iOS >= 6",
+                "last 4 versions",
+                "Opera >= 12.1",
+                "Safari >= 7"
+            ],
+            "cascade": true
+        },
+
+        "sass": {
+            "outputStyle": "expanded"
+        },
+
+        "cssnano": {
+
+        },
+
+        "rename": {
+            "suffix": ".min"
+        }
+    }
+}

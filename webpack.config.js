@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
     entry: './01-src/javascript/main.js',
     output: {
-        path: path.resolve(__dirname, 'dist/javascript'),
+        path: path.resolve(__dirname, 'public/javascript'),
         filename: 'bundle.js'
     },
     module: {
