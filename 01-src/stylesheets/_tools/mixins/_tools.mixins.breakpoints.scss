@@ -1,0 +1,61 @@
+//
+//--------------------------------------------------------------------------
+// Breakpoint mixin and alias
+//--------------------------------------------------------------------------
+//
+
+// Breakpoint Mixin
+// ======================================
+// @param {String|Number} $query - quoted, lower-case breakpoint name (e.g. 'm', 'l') or specific breakpoint size (e.g. 100px, 10vw)
+// @param {String|Number} $query-max - quoted, lower-case breakpoint name (e.g. 'm', 'l') or specific breakpoint size (e.g. 100px, 10vw)
+@mixin breakpoint($query, $query-max: false) {
+    @if ($query-max == false) {
+        @if (type_of($query) != number) {
+            $query: map_get($fw-breakpoints-sizes, $query);
+
+            @if ($query) {
+                @media screen and (min-width: $query) {
+                    @content;
+                }
+            } @else {
+                @error '=> ERROR: BREAKPOINT NOT FOUND! <= | Your Breakpoint-Name (#{$query}) did not match any of the values in the $fw-breakpoints-sizes map.';
+            }
+        } @else {
+            @media screen and (min-width: $query) {
+                @content;
+            }
+        }
+    } @else {
+        @if (type_of($query) != number) {
+            $query: map_get($fw-breakpoints-sizes, $query);
+
+            @if ($query == null) {
+                @error '=> ERROR: BREAKPOINT NOT FOUND! <= | Your Breakpoint-Name (#{$query}) did not match any of the values in the $fw-breakpoints-sizes map.';
+            }
+        }
+
+        @if (type_of($query-max) != number) {
+            $query-max: map_get($fw-breakpoints-sizes, $query-max);
+
+            @if ($query-max == null) {
+                @error '=> ERROR: BREAKPOINT NOT FOUND! <= | Your Breakpoint-Name (#{$query-max}) did not match any of the values in the $fw-breakpoints-sizes map.';
+            }
+        }
+
+        @if ($query < $query-max) {
+            @media screen and (min-width: $query) and (max-width: $query-max) {
+                @content;
+            }
+        } @else {
+            @error '=> ERROR: BREAKPOINT MIN-VALUE HIGHER OR EQUAL THEN MAX-VALUE <= | Your Breakpoint min value (#{$query}) is higher or equal then your breakpoint max-value (#{$query-max}).';
+        }
+    }
+}
+
+// 'bp()' alias for 'breakpoint()' mixin
+// ======================================
+@mixin bp($args...) {
+    @include breakpoint($args...) {
+        @content;
+    }
+}

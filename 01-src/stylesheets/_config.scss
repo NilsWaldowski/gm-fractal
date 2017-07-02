@@ -1,0 +1,55 @@
+//
+//--------------------------------------------------------------------------
+// Global framework configuration variables
+//--------------------------------------------------------------------------
+//
+
+// enabled modules
+// ======================================
+$fw-features-enabled: (
+    'grid': true, // Enable the grid module.
+    'colors': true // Enable the colors module.
+) !default;
+
+// Breakpoints: Sizes
+// ======================================
+$fw-breakpoints-sizes: (
+    'xs': 500px,
+    'sm': 700px,
+    'md': 900px,
+    'lg': 1100px,
+    'xl': 1300px,
+    'xxl': 1700px
+) !default;
+
+// Grid Module: Cols
+// ======================================
+// Number of grid cols to be used.
+$fw-grid-cols: 12 !default;
+
+// Grid Module: Gutter
+// ======================================
+// Size in 'px' on each side of the cols.
+$fw-grid-gutter: 15px !default;
+
+// Grid Module: fixed width's
+// ======================================
+$fw-grid-fixed-widths: (
+    'xs': 960px,
+    'sm': 960px,
+    'md': 960px,
+    'lg': 960px,
+    'xl': 1100px,
+    'xxl': 1200px
+) !default;
+
+// Colors Module: Colors
+// ======================================
+$fw-colors: (
+    'black': #000000,
+    'white': #ffffff
+) !default;
+
+// Colors Module: Responsive overrides
+// ======================================
+$fw-colors-responsive: true;
