@@ -26,6 +26,11 @@ fractal.web.set('builder.dest', __dirname + '/build');
 * Assets
 */
 fractal.web.set('static.path', __dirname + '/public');
+fractal.web.set('server.syncOptions', {
+    open: true,
+    //browser: ['google chrome', 'firefox'],
+    notify: true
+});
 
 module.exports = {
     fractal: fractal,
