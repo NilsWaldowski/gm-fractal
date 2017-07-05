@@ -3,12 +3,65 @@
 <head>
     <meta charset="utf-8">
     <title>Preview Layout</title>
-    <link rel="stylesheet" href="{{ path '/stylesheets/screen.css' }}" media="all"/>
+
+    <link rel="stylesheet" href="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}" media="all"/>
+
+    <!-- Modernizr Inline -->
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/modernizr-custom.js' }}"></script>
+
+    <!-- Cookie Helper Inline -->
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/cookie.js' }}"></script>
+
+    <!-- Font Loading Lib -->
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/fontfaceobserver.js' }}"></script>
+
+    <!-- Font Loading Configuration -->
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/fontfaceobserver-config.js' }}"></script>
+
+    <script>
+        /*
+        (function(w){
+            'use strict';
+
+            // if the cookie is already set, we're good and adding the loading-class.
+            if (cookie('fonts-loaded') !== null) {
+                document.documentElement.className += ' fonts-loaded';
+                return;
+            }
+
+            var openSans = new FontFaceObserver('Open Sans'),
+                ubuntuCondensed = new FontFaceObserver('Ubuntu Condensed');
+
+            w.Promise
+            .all([openSans.load(), ubuntuCondensed.load()])
+            .then(function() {
+                cookie('fonts-loaded', 'true', 7);
+                w.document.documentElement.className += ' fonts-loaded';
+            });
+        }(this));
+        */
+    </script>
+
+    <!-- CMS Output for BE/FE Communication -->
+    <script>
+        window.project = {
+            config: {
+                system: {
+                    code: 'dev', // dev/stage/live (CMS application context)
+                    baseUrl: 'http://bc-dev.im-kundendialog.de' // CMS baseUrl
+                }
+            },
+            // if necessary
+            locallang: {
+                more: 'more'
+            }
+        }
+    </script>
 </head>
 <body>
 
 {{{ yield }}}
 
-<script src="{{ path '/javascript/bundle.js' }}"></script>
+<script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript/bundle.js' }}"></script>
 </body>
 </html>

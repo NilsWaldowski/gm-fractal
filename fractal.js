@@ -26,6 +26,8 @@ fractal.web.set('builder.dest', __dirname + '/build');
 * Assets
 */
 fractal.web.set('static.path', __dirname + '/public');
+fractal.web.set('static.mount', '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend');
+
 fractal.web.set('server.syncOptions', {
     open: true,
     //browser: ['google chrome', 'firefox'],

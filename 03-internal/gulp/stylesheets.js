@@ -9,7 +9,6 @@ const cssnano      = require('gulp-cssnano')
 const rename       = require('gulp-rename')
 
 const stylesheetsTask = function() {
-    //global.production = true
 
     const paths = {
         src: path.resolve(process.env.PWD, PATH_CONFIG.src,
@@ -29,7 +28,7 @@ const stylesheetsTask = function() {
         .pipe(gulp.dest(paths.dest))
         .pipe(gulpif(global.production, cssnano(cssnanoConfig)))
         .pipe(gulpif(global.production, rename(TASK_CONFIG.stylesheets.rename)))
-        .pipe(gulp.dest(paths.dest))
+        .pipe(gulpif(global.production, gulp.dest(paths.dest)))
 }
 
 gulp.task('stylesheets', stylesheetsTask)

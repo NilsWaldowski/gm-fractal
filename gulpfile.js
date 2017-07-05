@@ -8,8 +8,8 @@ const f = require('./fractal.js');
 process.env.PWD = process.env.PWD || path.resolve(process.cwd(), '../../')
 
 // Globally expose config objects
-global.PATH_CONFIG = require('./03-internal/gulp/config/dirs.json')
-global.TASK_CONFIG = require('./03-internal/gulp/config/config.json')
+global.PATH_CONFIG = require('./03-internal/gulp/config/dirs.js')
+global.TASK_CONFIG = require('./03-internal/gulp/config/config.js')
 
 // Require all tasks in gulpfile.js/tasks, including subfolders
 requireDir('./03-internal/gulp', { recurse: false })
@@ -43,7 +43,7 @@ gulp.task('fractal:build', function(){
 /**
 * Init Assets
 */
-gulp.task('init', gulp.parallel('stylesheets', 'javascript', 'images', 'misc', 'fonts'));
+gulp.task('init', gulp.parallel('stylesheets', 'javascript', 'javascriptInline', 'modernizr', 'images', 'misc', 'fonts'));
 
 
 /**

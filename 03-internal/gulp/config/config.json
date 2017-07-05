@@ -36,6 +36,41 @@
         "extensions": ["js", "jsx"]
     },
 
+    "javascriptInline": {
+        "extensions": ["js", "jsx"],
+        "rename": {
+            "suffix": ".min"
+        }
+    },
+
+    "modernizr": {
+        "extensions": ["js", "jsx"],
+        "outputName": "modernizr.js",
+        "rename": {
+            "suffix": ".min"
+        },
+        "settings": {
+            "cache" : true,
+            "options" : [
+                "setClasses",
+                "addTest",
+                "testProp",
+                "fnBind"
+            ],
+            "tests": [
+                "forms_placeholder",
+                "history",
+                "inlinesvg",
+                "svg",
+                "touchevents",
+                "csstransforms",
+                "csstransforms3d",
+                "cssvwunit",
+                "video"
+            ]
+        }
+    },
+
     "misc": {
         "extensions": ["mp4", "webm"]
     }
