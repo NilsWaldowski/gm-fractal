@@ -4,6 +4,6 @@ module.exports = {
     status: 'prototype',
 
     context: {
-        homepageTitle: 'Performance Test'
+        homepageTitle: 'Performance Test 123'
     }
 };

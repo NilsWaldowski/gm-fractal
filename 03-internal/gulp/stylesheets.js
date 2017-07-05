@@ -8,12 +8,13 @@ const path         = require('path')
 const cssnano      = require('gulp-cssnano')
 const rename       = require('gulp-rename')
 
-const cssTask = function() {
+const stylesheetsTask = function() {
     //global.production = true
 
     const paths = {
-        src: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.stylesheets.src, '**/*.scss'),
-        dest: path.resolve(process.env.PWD, PATH_CONFIG.dist, PATH_CONFIG.stylesheets.dist)
+        src: path.resolve(process.env.PWD, PATH_CONFIG.src,
+            PATH_CONFIG.stylesheets.src, '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'),
+        dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.stylesheets.dest)
     }
 
     const cssnanoConfig = TASK_CONFIG.stylesheets.cssnano || {}
@@ -31,5 +32,5 @@ const cssTask = function() {
         .pipe(gulp.dest(paths.dest))
 }
 
-gulp.task('css', cssTask)
-module.exports = cssTask
+gulp.task('stylesheets', stylesheetsTask)
+module.exports = stylesheetsTask

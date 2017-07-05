@@ -5,8 +5,9 @@ const path        = require('path')
 const miscTask = function() {
 
     const paths = {
-        src: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.misc.src, '**/*'),
-        dest: path.resolve(process.env.PWD, PATH_CONFIG.dist, PATH_CONFIG.misc.dist)
+        src: path.resolve(process.env.PWD, PATH_CONFIG.src,
+            PATH_CONFIG.misc.src, '**/*.{' + TASK_CONFIG.misc.extensions + '}'),
+        dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.misc.dest)
     }
 
     return gulp.src([paths.src, '*!README.md'])

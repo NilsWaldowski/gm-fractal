@@ -1,6 +1,7 @@
 {
     "stylesheets": {
 
+        "extensions": ["sass", "scss", "css"],
         "autoprefixer": {
             "browsers": [
                 "> 1% in DE",
@@ -14,17 +15,28 @@
             ],
             "cascade": true
         },
-
         "sass": {
             "outputStyle": "expanded"
         },
-
-        "cssnano": {
-
-        },
-
+        "cssnano": {},
         "rename": {
             "suffix": ".min"
         }
+    },
+
+    "images": {
+        "extensions": ["jpg", "png", "gif"]
+    },
+
+    "fonts": {
+        "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "javascript": {
+        "extensions": ["js", "jsx"]
+    },
+
+    "misc": {
+        "extensions": ["mp4", "webm"]
     }
 }

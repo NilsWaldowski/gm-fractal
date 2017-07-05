@@ -1,29 +1,30 @@
 {
     "src": "./01-src",
-    "dist": "./public",
+    "dest": "./public",
+    "dist": "./public_deploy",
 
     "stylesheets": {
         "src": "stylesheets",
-        "dist": "stylesheets"
+        "dest": "stylesheets"
     },
     "javascript": {
         "src": "javascript",
-        "dist": "javascript"
+        "dest": "javascript"
     },
     "images": {
         "src": "images",
-        "dist": "images"
+        "dest": "images"
     },
     "icons": {
         "src": "icons",
-        "dist": "icons"
+        "dest": "icons"
     },
     "fonts": {
         "src": "fonts",
-        "dist": "fonts"
+        "dest": "fonts"
     },
     "misc": {
         "src": "misc",
-        "dist": "misc"
+        "dest": "misc"
     }
 }

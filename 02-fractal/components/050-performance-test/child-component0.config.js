@@ -3,7 +3,7 @@
 module.exports = {
     title: 'Child Component',
     context: {
-        title: 'My Child Component',
+        title: 'My Child Component 123',
 
         users: [
             {

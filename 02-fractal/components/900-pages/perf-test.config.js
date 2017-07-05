@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Performance Test',
+    title: 'Performance Test 123',
 
     status: 'prototype',
 

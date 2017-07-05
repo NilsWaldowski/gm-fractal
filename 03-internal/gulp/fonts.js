@@ -5,8 +5,9 @@ const path        = require('path')
 const fontsTask = function() {
 
     const paths = {
-        src: path.resolve(process.env.PWD, PATH_CONFIG.src, PATH_CONFIG.fonts.src, '**/*'),
-        dest: path.resolve(process.env.PWD, PATH_CONFIG.dist, PATH_CONFIG.fonts.dist)
+        src: path.resolve(process.env.PWD, PATH_CONFIG.src,
+            PATH_CONFIG.fonts.src, '**/*.{' + TASK_CONFIG.fonts.extensions + '}'),
+        dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.fonts.dest)
     }
 
     return gulp.src([paths.src, '*!README.md'])

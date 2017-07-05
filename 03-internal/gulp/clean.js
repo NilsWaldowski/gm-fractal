@@ -3,7 +3,7 @@ const del = require('del')
 const path = require('path')
 
 const cleanTask = function() {
-    return del([path.resolve(process.env.PWD, PATH_CONFIG.dist)], {
+    return del([path.resolve(process.env.PWD, PATH_CONFIG.dest)], {
         force: true
     })
 }
