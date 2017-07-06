@@ -1,4 +1,4 @@
-(function(w){
+(function(w) {
     'use strict';
 
     // if the cookie is already set, we're good and adding the loading-class.
@@ -11,9 +11,9 @@
         ubuntuCondensed = new FontFaceObserver('Ubuntu Condensed');
 
     w.Promise
-    .all([openSans.load(), ubuntuCondensed.load()])
-    .then(function() {
-        cookie('fonts-loaded', 'true', 7);
-        w.document.documentElement.className += ' fonts-loaded';
-    });
+        .all([openSans.load(), ubuntuCondensed.load()])
+        .then(function() {
+            cookie('fonts-loaded', 'true', 7);
+            w.document.documentElement.className += ' fonts-loaded';
+        });
 }(this));

@@ -4,64 +4,43 @@
     <meta charset="utf-8">
     <title>Preview Layout</title>
 
-    <link rel="stylesheet" href="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}" media="all"/>
+    <!-- NO JS CSS Include Fallback -->
+    <noscript>
+        <link href='{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}' rel='stylesheet' type='text/css'>
+    </noscript>
 
-    <!-- Modernizr Inline -->
+    <!-- Inline: Modernizr -->
     <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/modernizr-custom.js' }}"></script>
 
-    <!-- Cookie Helper Inline -->
+    <!-- Inline: Cookie Helper Lib -->
     <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/cookie.js' }}"></script>
 
-    <!-- Font Loading Lib -->
+    <!-- Inline: Font Loading Lib -->
     <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/fontfaceobserver.js' }}"></script>
 
-    <!-- Font Loading Configuration -->
+    <!-- Inline: Font Loading Configuration -->
     <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/fontfaceobserver-config.js' }}"></script>
 
-    <script>
-        /*
-        (function(w){
-            'use strict';
-
-            // if the cookie is already set, we're good and adding the loading-class.
-            if (cookie('fonts-loaded') !== null) {
-                document.documentElement.className += ' fonts-loaded';
-                return;
-            }
-
-            var openSans = new FontFaceObserver('Open Sans'),
-                ubuntuCondensed = new FontFaceObserver('Ubuntu Condensed');
-
-            w.Promise
-            .all([openSans.load(), ubuntuCondensed.load()])
-            .then(function() {
-                cookie('fonts-loaded', 'true', 7);
-                w.document.documentElement.className += ' fonts-loaded';
-            });
-        }(this));
-        */
-    </script>
-
-    <!-- CMS Output for BE/FE Communication -->
-    <script>
-        window.project = {
-            config: {
-                system: {
-                    code: 'dev', // dev/stage/live (CMS application context)
-                    baseUrl: 'http://bc-dev.im-kundendialog.de' // CMS baseUrl
-                }
-            },
-            // if necessary
-            locallang: {
-                more: 'more'
-            }
-        }
-    </script>
+    <!-- Inline: Settings for BE/FE Communication and fractal specifics -->
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/projectSettings.js' }}"></script>
 </head>
 <body>
 
 {{{ yield }}}
 
-<script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript/bundle.js' }}"></script>
+<script async src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript/bundle.js' }}"></script>
+
+<script>
+    var cb = function() {
+            var e = document.createElement('link');
+            e.rel = 'stylesheet';
+            e.href = '{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}';
+            var t = document.getElementsByTagName('head')[0];
+            t.appendChild(e)
+        },
+        raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+</script>
 </body>
 </html>
