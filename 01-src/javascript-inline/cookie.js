@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // cookie function from https://github.com/filamentgroup/cookie/
 function cookie(name, value, days) {
     var expires;
