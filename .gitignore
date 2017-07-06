@@ -12,6 +12,7 @@ _backup
 dist
 public
 public_deploy
+scss-framework
 
 #
 # Ignore OS specific system files (Thumbs.db, .DS_Store, etc.)
