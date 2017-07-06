@@ -1,6 +1,7 @@
-const changed = require('gulp-changed')
-const gulp = require('gulp')
-const path = require('path')
+const changed   = require('gulp-changed')
+const gulp      = require('gulp')
+const imagemin  = require('gulp-imagemin')
+const path      = require('path')
 
 const imagesTask = function() {
 
@@ -12,6 +13,11 @@ const imagesTask = function() {
 
     return gulp.src([paths.src, '*!README.md'])
         .pipe(changed(paths.dest)) // Ignore unchanged files
+        .pipe(imagemin({
+            interlaced: true,
+            progressive: true,
+            optimizationLevel: 5
+        }))
         .pipe(gulp.dest(paths.dest))
 }
 

@@ -1,10 +1,10 @@
 module.exports = {
-    
-    'stylesheets': {
 
-        'extensions': ['sass', 'scss', 'css'],
-        'autoprefixer': {
-            'browsers': [
+    stylesheets: {
+
+        extensions: ['sass', 'scss', 'css'],
+        autoprefixer: {
+            browsers: [
                 '> 1% in DE',
                 'Android >= 4.1',
                 'Explorer >= 9',
@@ -14,51 +14,51 @@ module.exports = {
                 'Opera >= 12.1',
                 'Safari >= 7'
             ],
-            'cascade': true
+            cascade: true
         },
-        'sass': {
-            'outputStyle': 'expanded'
+        sass: {
+            outputStyle: 'expanded'
         },
-        'cssnano': {},
-        'rename': {
-            'suffix': '.min'
+        cssnano: {},
+        rename: {
+            suffix: '.min'
         }
     },
 
-    'images': {
-        'extensions': ['jpg', 'png', 'gif']
+    images: {
+        extensions: ['jpg', 'png', 'gif']
     },
 
-    'fonts': {
-        'extensions': ['woff2', 'woff', 'eot', 'ttf', 'svg']
+    fonts: {
+        extensions: ['woff2', 'woff', 'eot', 'ttf', 'svg']
     },
 
-    'javascript': {
-        'extensions': ['js', 'jsx']
+    javascript: {
+        extensions: ['js', 'jsx']
     },
 
-    'javascriptInline': {
-        'extensions': ['js', 'jsx'],
-        'rename': {
-            'suffix': '.min'
+    javascriptInline: {
+        extensions: ['js', 'jsx'],
+        rename: {
+            suffix: '.min'
         }
     },
 
-    'modernizr': {
-        'extensions': ['js', 'jsx'],
-        'outputName': 'modernizr.js',
-        'rename': {
-            'suffix': '.min'
+    modernizr: {
+        extensions: ['js', 'jsx'],
+        outputName: 'modernizr.js',
+        rename: {
+            suffix: '.min'
         },
-        'settings': {
-            'cache' : true,
-            'options' : [
+        settings: {
+            cache : true,
+            options : [
                 'setClasses',
                 'addTest',
                 'testProp',
                 'fnBind'
             ],
-            'tests': [
+            tests: [
                 'forms_placeholder',
                 'history',
                 'inlinesvg',
@@ -72,7 +72,32 @@ module.exports = {
         }
     },
 
-    'misc': {
-        'extensions': ['mp4', 'webm']
-    }
+    misc: {
+        extensions: ['mp4', 'webm']
+    },
+
+    icons: {
+        extensions: ['svg', 'ico'],
+        settings: {
+            shape: {
+                dimension: {
+                    maxWidth: 128,
+                    maxHeight: 128,
+                    attribute: true
+                },
+                dest: '/'
+            },
+            mode: {
+                viewDEACTIVATED: {
+                    render: {
+                        scss: false
+                    }
+                },
+                symbol: {
+                    dest: '',
+                    sprite: 'sprite.svg'
+                }
+            }
+        }
+    },
 }
