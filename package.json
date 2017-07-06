@@ -1,13 +1,15 @@
 {
-    "name": "fractal",
-    "version": "1.0.0",
+    "name": "cps-project-setup",
+    "version": "0.1.0",
     "description": "",
+    "author": "Nils Waldowski",
     "engines": {
         "npm": ">=5",
         "node": ">=6.11.0"
     },
-    "main": "index.js",
     "scripts": {
+        "start": "gulp",
+
         "prebuild": "del-cli public -f",
         "build": "webpack",
         "execute": "node public/javascript/bundle.js",
@@ -15,7 +17,7 @@
         "watch": "webpack --watch"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "lodash": "^4.17.4",
         "moment": "^2.18.1"
