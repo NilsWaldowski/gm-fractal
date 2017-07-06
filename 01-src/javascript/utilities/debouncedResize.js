@@ -1,3 +1,6 @@
+/**
+ * debouncedResize - description
+ */
 import ee from './eventEmitter'
 import debounce from './debounce'
 

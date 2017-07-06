@@ -1,3 +1,6 @@
+/**
+ * throttledScroll - description
+ */
 import ee from './eventEmitter'
 import fastdom from 'fastdom'
 
@@ -10,7 +13,13 @@ import fastdom from 'fastdom'
 // However, this means it's VITAL that all writes in callbacks are delegated to fastdom
 let scrollRunning = false
 
-function onScroll() {
+
+/**
+ * onScroll - description
+ *
+ * @return {type}  description
+ */
+let onScroll = () => {
     if (!scrollRunning) {
         scrollRunning = true;
         fastdom.measure(function() {
@@ -20,9 +29,10 @@ function onScroll() {
     }
 }
 
+
 window.addEventListener('scroll', 'requestIdleCallback' in window ?
     function() {
-        window.requestIdleCallback(onScroll);
+        window.requestIdleCallback(onScroll)
     } :
     onScroll
 );

@@ -3,29 +3,36 @@
 * Import Utilities
 */
 import { debugMode } from './utilities/projectSettings'
-import detect from './utilities/detect'
+import * as detect from './utilities/detect'
 import ee from './utilities/eventEmitter'
 import './utilities/cssBreakpoint'
 
-debugMode ? console.log('VW: ' +  detect.getViewport().width + '\n' + 'VH: ' +  detect.getViewport().height) : false
-
 
 /**
-* Throttled Scroll
+* Throttled Scroll & Debounce Resize
 */
 import './utilities/throttledScroll'
-ee.on('window:throttledScroll', () => {
-    debugMode ? console.log('scroll happend') : false
-});
+import './utilities/debouncedResize'
 
 
 /**
- * Debounce Resize
- */
-import './utilities/debouncedResize'
-ee.on('window:debouncedResize', () => {
-    debugMode ? console.log('resize happend') : false
-});
+* Debug Messages
+*/
+if (debugMode) {
+
+    // viewport size
+    console.log('VW: ' +  detect.getViewport().width + '\n' + 'VH: ' +  detect.getViewport().height)
+
+    // on scroll
+    ee.on('window:throttledScroll', () => {
+        console.log('scroll happend')
+    });
+
+    // on resize
+    ee.on('window:debouncedResize', () => {
+        console.log('VW: ' +  detect.getViewport().width + '\n' + 'VH: ' +  detect.getViewport().height)
+    });
+}
 
 
 /**

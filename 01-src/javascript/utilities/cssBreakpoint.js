@@ -1,3 +1,6 @@
+/**
+ * cssBreakpoint - description
+ */
 import './../vendor/on-media-query'
 import {  debugMode } from './projectSettings'
 

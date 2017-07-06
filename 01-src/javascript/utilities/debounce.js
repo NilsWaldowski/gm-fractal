@@ -1,4 +1,12 @@
-function debounce(func, wait, immediate) {
+/**
+ * debounce - description
+ *
+ * @param  {type} func      description
+ * @param  {type} wait      description
+ * @param  {type} immediate description
+ * @return {type}           description
+ */
+export default function debounce(func, wait, immediate) {
     var timeout;
     return function() {
         var context = this,
@@ -13,5 +21,3 @@ function debounce(func, wait, immediate) {
         if (callNow) func.apply(context, args);
     };
 }
-
-export default debounce;

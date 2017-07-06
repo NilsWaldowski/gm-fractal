@@ -1,4 +1,9 @@
-function getViewport() {
+/**
+ * getViewport - description
+ *
+ * @return {type}  description
+ */
+export const getViewport = () => {
     var w = window,
         d = document,
         e = d.documentElement,
@@ -10,11 +15,12 @@ function getViewport() {
     };
 }
 
-function getOrientation() {
+
+/**
+ * getOrientation - description
+ *
+ * @return {type}  description
+ */
+export const getOrientation = () => {
     return (window.innerHeight > window.innerWidth) ? 'portrait' : 'landscape';
 }
-
-module.exports = {
-    getViewport: getViewport,
-    getOrientation: getOrientation
-};

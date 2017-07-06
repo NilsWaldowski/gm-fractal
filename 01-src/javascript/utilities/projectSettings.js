@@ -1,3 +1,6 @@
+/**
+ * projectSettings - description
+ */
 const projectSettings = window.projectSettings
 const projectConfig = projectSettings ? projectSettings.config : undefined
 const consoleMsgStyle = 'color: red; padding: 5px 0px;';
