@@ -18,7 +18,7 @@
         "selector-list-comma-space-before": "never",
         "selector-list-comma-newline-after": "always",
         "selector-max-id": 0,
-        "string-quotes": "double",
+        "string-quotes": "single",
         "value-no-vendor-prefix": true
     },
 }
