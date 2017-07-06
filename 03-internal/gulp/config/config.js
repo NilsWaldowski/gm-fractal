@@ -34,7 +34,10 @@ module.exports = {
     },
 
     javascript: {
-        extensions: ['js', 'jsx']
+        extensions: ['js', 'jsx'],
+        rename: {
+            suffix: '.min'
+        }
     },
 
     javascriptInline: {
