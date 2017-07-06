@@ -1,12 +1,13 @@
-const gulp         = require('gulp')
-const gulpif       = require('gulp-if')
-const sass         = require('gulp-sass')
-const sourcemaps   = require('gulp-sourcemaps')
-const handleErrors = require('./handleErrors')
-const autoprefixer = require('gulp-autoprefixer')
-const path         = require('path')
-const cssnano      = require('gulp-cssnano')
-const rename       = require('gulp-rename')
+const gulp          = require('gulp')
+const gulpif        = require('gulp-if')
+const sass          = require('gulp-sass')
+const sourcemaps    = require('gulp-sourcemaps')
+const handleErrors  = require('./handleErrors')
+const autoprefixer  = require('gulp-autoprefixer')
+const gulpStylelint = require('gulp-stylelint');
+const path          = require('path')
+const cssnano       = require('gulp-cssnano')
+const rename        = require('gulp-rename')
 
 const stylesheetsTask = function() {
 
@@ -22,6 +23,7 @@ const stylesheetsTask = function() {
     return gulp.src([paths.src, '*!README.md'])
         .pipe(gulpif(!global.production, sourcemaps.init()))
         .pipe(sass(TASK_CONFIG.stylesheets.sass))
+        .pipe(gulpStylelint(TASK_CONFIG.stylesheets.styleLint))
         .on('error', handleErrors)
         .pipe(autoprefixer(TASK_CONFIG.stylesheets.autoprefixer))
         .pipe(gulpif(!global.production, sourcemaps.write()))

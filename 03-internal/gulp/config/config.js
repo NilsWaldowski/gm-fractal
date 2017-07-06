@@ -22,6 +22,12 @@ module.exports = {
         cssnano: {},
         rename: {
             suffix: '.min'
+        },
+
+        styleLint: {
+            reporters: [
+                {formatter: 'string', console: true}
+            ]
         }
     },
 
