@@ -1,7 +1,7 @@
 module.exports = {
     src: './01-src',
     dest: './public',
-    dist: './public_deploy/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend',
+    dist: '../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend',
 
     stylesheets: {
         src: 'stylesheets',
