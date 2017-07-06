@@ -1,6 +1,6 @@
-const changed     = require('gulp-changed')
-const gulp        = require('gulp')
-const path        = require('path')
+const changed   = require('gulp-changed')
+const gulp      = require('gulp')
+const path      = require('path')
 
 const miscTask = function() {
 

@@ -1,6 +1,5 @@
-const changed     = require('gulp-changed')
-const gulp        = require('gulp')
-const path        = require('path')
+const gulp      = require('gulp')
+const path      = require('path')
 
 const copyBuildTask = function() {
 

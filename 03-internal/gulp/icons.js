@@ -1,8 +1,8 @@
-const changed     = require('gulp-changed')
-const gulp        = require('gulp')
-const imagemin    = require('gulp-imagemin')
-const svgSprite   = require('gulp-svg-sprite')
-const path        = require('path')
+const changed   = require('gulp-changed')
+const gulp      = require('gulp')
+const imagemin  = require('gulp-imagemin')
+const svgSprite = require('gulp-svg-sprite')
+const path      = require('path')
 
 const iconsTask = function() {
 

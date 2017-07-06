@@ -1,11 +1,13 @@
-var gulp = require('gulp')
-var path = require('path')
-var watch = require('gulp-watch')
+const gulp      = require('gulp')
+const path      = require('path')
+const watch     = require('gulp-watch')
 
-var watchTask = function() {
-    var watchableTasks = ['fonts', 'images', 'misc', 'stylesheets', 'javascript']
+const watchTask = function() {
+    const watchableTasks = ['fonts', 'images', 'icons', 'misc', 'stylesheets', 'javascript', 'javascriptInline']
 
     function getTaskPathFor(taskName) {
+        return PATH_CONFIG[taskName]
+        /*
         switch (taskName) {
             case 'iconFont':
                 return PATH_CONFIG.icons
@@ -14,16 +16,17 @@ var watchTask = function() {
             default:
                 return PATH_CONFIG[taskName]
         }
+        */
     }
 
     watchableTasks.forEach(function(taskName) {
-        var taskConfig = TASK_CONFIG[taskName]
-        var taskPath = getTaskPathFor(taskName)
-        var watchConfig = {}
+        const taskConfig = TASK_CONFIG[taskName]
+        const taskPath = getTaskPathFor(taskName)
+        const watchConfig = {}
 
         if (taskConfig) {
-            var srcPath = path.resolve(process.env.PWD, PATH_CONFIG.src, taskPath.src)
-            var globPattern = '**/*' + (taskConfig.extensions ? '.{' + taskConfig.extensions.join(',') + '}' : '')
+            const srcPath = path.resolve(process.env.PWD, PATH_CONFIG.src, taskPath.src)
+            const globPattern = '**/*' + (taskConfig.extensions ? '.{' + taskConfig.extensions.join(',') + '}' : '')
             watch(path.join(srcPath, globPattern), watchConfig, function() {
                 require('./' + taskName)()
             })
@@ -32,5 +35,4 @@ var watchTask = function() {
 }
 
 gulp.task('watch', watchTask)
-
 module.exports = watchTask

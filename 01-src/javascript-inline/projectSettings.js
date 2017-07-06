@@ -1,4 +1,4 @@
-window.project = {
+window.projectSettings = {
     config: {
         system: {
             code: 'dev', // dev/stage/live (CMS application context)

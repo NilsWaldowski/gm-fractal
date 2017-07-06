@@ -28,8 +28,10 @@
 
 {{{ yield }}}
 
+<!-- Async: Main Js Bundle -->
 <script async src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript/bundle.js' }}"></script>
 
+<!-- Generate stylesheet link tag dynamically -->
 <script>
     var cb = function() {
             var e = document.createElement('link');

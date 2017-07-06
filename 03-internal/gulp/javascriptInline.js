@@ -1,9 +1,8 @@
-const gulp         = require('gulp')
-const gulpif       = require('gulp-if')
-const uglify       = require('gulp-uglify')
-const handleErrors = require('./handleErrors')
-const path         = require('path')
-const rename       = require('gulp-rename')
+const gulp      = require('gulp')
+const gulpif    = require('gulp-if')
+const uglify    = require('gulp-uglify')
+const path      = require('path')
+const rename    = require('gulp-rename')
 
 const javascriptInlineTask = function() {
 

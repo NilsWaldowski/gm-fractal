@@ -1,9 +1,9 @@
-const gulp        = require('gulp')
-const path        = require('path')
-const modernizr   = require('gulp-modernizr')
-const gulpif      = require('gulp-if')
-const uglify      = require('gulp-uglify')
-const rename      = require('gulp-rename')
+const gulp      = require('gulp')
+const path      = require('path')
+const modernizr = require('gulp-modernizr')
+const gulpif    = require('gulp-if')
+const uglify    = require('gulp-uglify')
+const rename    = require('gulp-rename')
 
 const modernizrTask = function() {
 
