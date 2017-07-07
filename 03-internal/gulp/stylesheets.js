@@ -22,8 +22,9 @@ const stylesheetsTask = function() {
 
     return gulp.src([paths.src, '*!README.md'])
         .pipe(gulpif(!global.production, sourcemaps.init()))
-        .pipe(sass(TASK_CONFIG.stylesheets.sass))
         .pipe(gulpStylelint(TASK_CONFIG.stylesheets.styleLint))
+        .on('error', handleErrors)
+        .pipe(sass(TASK_CONFIG.stylesheets.sass))
         .on('error', handleErrors)
         .pipe(autoprefixer(TASK_CONFIG.stylesheets.autoprefixer))
         .pipe(gulpif(!global.production, sourcemaps.write()))
