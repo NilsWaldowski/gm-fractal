@@ -1,0 +1,6 @@
+/* ==========================================================================
+   Font File Declaration (@font-face)
+   ========================================================================== */
+@include font-face(MyFont, '/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/misc/fonts/myfont', null, null, eot otf woff woff2);
+@include font-face(MyFontItalic, '/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/misc/fonts/myfontItalic', null, null, eot otf woff woff2);
+@include font-face(MyFontBold, '/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/misc/fonts/myfontBold', null, null, eot otf woff woff2);
