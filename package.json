@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "cps-scss-framework": "^0.2.0",
     "fastclick": "^1.0.6",
     "fastdom": "^1.0.6",
     "lodash": "^4.17.4",
