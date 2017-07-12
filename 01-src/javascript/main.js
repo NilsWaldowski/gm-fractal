@@ -45,5 +45,5 @@ fastclick.attach(document.body);
 /**
 * Init Project Modules
 */
-import module from './modules/moduleTest'
+import module from './modules/moduleExample'
 module();
