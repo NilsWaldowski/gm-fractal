@@ -51,6 +51,7 @@ gulp.task('init', gulp.parallel(
     'javascriptInline',
     'modernizr',
     'images',
+    'icons',
     'misc',
     'fonts'
 ));
