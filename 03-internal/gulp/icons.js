@@ -3,6 +3,9 @@ const gulp      = require('gulp')
 const imagemin  = require('gulp-imagemin')
 const svgSprite = require('gulp-svg-sprite')
 const path      = require('path')
+const fancyLog      = require('fancy-log')
+const chalk         = require('chalk')
+const emoji         = require('node-emoji')
 
 const iconsTask = function() {
 
@@ -11,6 +14,9 @@ const iconsTask = function() {
             PATH_CONFIG.icons.src, '**/*.{' + TASK_CONFIG.icons.extensions + '}'),
         dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.icons.dest)
     }
+
+    fancyLog(chalk.bgGreen.white.bold(' ' + emoji.get('heart') + '  ' +
+        'Optimize Icons & create Sprite' + ' ' + emoji.get('heart') + '  '))
 
     return gulp.src([paths.src, '*!README.md'])
         .pipe(changed(paths.dest)) // Ignore unchanged files

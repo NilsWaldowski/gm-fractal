@@ -5,6 +5,9 @@ const gulpif        = require('gulp-if')
 const uglify        = require('gulp-uglify')
 const path          = require('path')
 const rename        = require('gulp-rename')
+const fancyLog      = require('fancy-log')
+const chalk         = require('chalk')
+const emoji         = require('node-emoji')
 
 // @TODO replace webpack2-stream-watch -> https://css-tricks.com/combine-webpack-gulp-4/
 const javascriptTask = function() {
@@ -12,6 +15,9 @@ const javascriptTask = function() {
     const paths = {
         dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.javascript.dest)
     }
+
+    fancyLog(chalk.bgGreen.white.bold(' ' + emoji.get('heart') + '  ' +
+        'Compiling Javascript' + ' ' + emoji.get('heart') + '  '))
 
     return webpack(webpackConfig)
         .pipe(gulp.dest(paths.dest))

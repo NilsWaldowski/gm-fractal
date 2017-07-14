@@ -8,6 +8,9 @@ const gulpStylelint = require('gulp-stylelint');
 const path          = require('path')
 const cssnano       = require('gulp-cssnano')
 const rename        = require('gulp-rename')
+const fancyLog      = require('fancy-log')
+const chalk         = require('chalk')
+const emoji         = require('node-emoji')
 
 const stylesheetsTask = function() {
 
@@ -16,6 +19,9 @@ const stylesheetsTask = function() {
             PATH_CONFIG.stylesheets.src, '**/*.{' + TASK_CONFIG.stylesheets.extensions + '}'),
         dest: path.resolve(process.env.PWD, PATH_CONFIG.dest, PATH_CONFIG.stylesheets.dest)
     }
+
+    fancyLog(chalk.bgGreen.white.bold(' ' + emoji.get('heart') + '  ' +
+        'Compiling Stylesheets' + ' ' + emoji.get('heart') + '  '))
 
     const cssnanoConfig = TASK_CONFIG.stylesheets.cssnano || {}
     cssnanoConfig.autoprefixer = false // this should always be false, since we're autoprefixing separately
