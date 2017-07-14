@@ -52,5 +52,134 @@
     "require-dir": "^0.3.2",
     "webpack": "^3.0.0",
     "webpack2-stream-watch": "^3.2.2"
+  },
+  "paths": {
+    "src": "./01-src",
+    "dest": "./public",
+    "dist": "../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend",
+    "stylesheets": {
+      "src": "stylesheets",
+      "dest": "stylesheets"
+    },
+    "javascript": {
+      "src": "javascript",
+      "dest": "javascript"
+    },
+    "javascriptInline": {
+      "src": "javascript-inline",
+      "dest": "javascript-inline"
+    },
+    "images": {
+      "src": "images",
+      "dest": "images"
+    },
+    "icons": {
+      "src": "icons",
+      "dest": "icons"
+    },
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts"
+    },
+    "misc": {
+      "src": "misc",
+      "dest": "misc"
+    }
+  },
+  "taskConfig": {
+    "stylesheets": {
+      "extensions": [
+        "sass",
+        "scss",
+        "css"
+      ],
+      "autoprefixer": {
+        "browsers": [
+          "> 1% in DE",
+          "Android >= 4.1",
+          "Explorer >= 9",
+          "Firefox >= 17",
+          "iOS >= 6",
+          "last 4 versions",
+          "Opera >= 12.1",
+          "Safari >= 7"
+        ],
+        "cascade": true
+      },
+      "sass": {
+        "outputStyle": "expanded"
+      },
+      "cssnano": {},
+      "rename": {
+        "suffix": ".min"
+      }
+    },
+    "images": {
+      "extensions": [
+        "jpg",
+        "png",
+        "gif"
+      ]
+    },
+    "fonts": {
+      "extensions": [
+        "woff2",
+        "woff",
+        "eot",
+        "ttf",
+        "svg"
+      ]
+    },
+    "javascript": {
+      "extensions": [
+        "js",
+        "jsx"
+      ]
+    },
+    "javascriptInline": {
+      "extensions": [
+        "js",
+        "jsx"
+      ],
+      "rename": {
+        "suffix": ".min"
+      }
+    },
+    "modernizr": {
+      "extensions": [
+        "js",
+        "jsx"
+      ],
+      "outputName": "modernizr.js",
+      "rename": {
+        "suffix": ".min"
+      },
+      "settings": {
+        "cache": true,
+        "options": [
+          "setClasses",
+          "addTest",
+          "testProp",
+          "fnBind"
+        ],
+        "tests": [
+          "forms_placeholder",
+          "history",
+          "inlinesvg",
+          "svg",
+          "touchevents",
+          "csstransforms",
+          "csstransforms3d",
+          "cssvwunit",
+          "video"
+        ]
+      }
+    },
+    "misc": {
+      "extensions": [
+        "mp4",
+        "webm"
+      ]
+    }
   }
 }
