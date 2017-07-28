@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Configuration for SCSS-Framework
+   ========================================================================== */
+
+// enabled modules
+// ======================================
+$fw-features-enabled: (
+   'reset-css': true, // Enable the css-reset module.
+   'normalize-css': false, // Enable css-normalize module.
+   'box-sizing': true, // Enable box-sizing: border-box.
+   'grid': true, // Enable the grid module.
+   'colors': true, // Enable the colors module.
+   'typo': true, // Enable the typography module.
+   'accessibility': true, // Enable accessibility class.
+   'aspect-ratio': true,  // Enable aspect ratio module.
+   'clearfix': true,  // Enable clearfix module.
+   'reset-button': true, // Enable reset button module.
+   'text-truncate': true // Enable text truncate module.
+) !default;
+
+// Breakpoints: Sizes
+// ======================================
+$fw-breakpoints-sizes: (
+   'xs': 500px,
+   'sm': 700px,
+   'md': 900px,
+   'lg': 1100px,
+   'xl': 1300px,
+   'xxl': 1700px
+) !default;
+
+// Grid Module: Cols
+// ======================================
+// Number of grid cols to be used.
+$fw-grid-cols: 12 !default;
+
+// Grid Module: Gutter
+// ======================================
+// Size in 'px' on each side of the cols.
+$fw-grid-gutter: 15px !default;
+
+// Grid Module: fixed width's
+// ======================================
+$fw-grid-fixed-widths: (
+   'xs': 960px,
+   'sm': 960px,
+   'md': 960px,
+   'lg': 960px,
+   'xl': 1100px,
+   'xxl': 1200px
+) !default;
+
+// Colors Module: Colors
+// ======================================
+$fw-colors: (
+    'brand-red':   #de0026,
+    'white':       #fff,
+    'g1':          #f3f0ed,
+    'g2':          #d9d9d9,
+    'g3':          #a1a1a1,
+    'g4':          #808080,
+    'g5':          #595959,
+    'g6':          #444,
+    'g7':          #222,
+    'black':       #000,
+    'positive':    #03804d,
+    'caution':     #a59b15,
+    'negative':    #b12a0b,
+    'neutral':     #0192d0
+) !default;
+
+// Colors Module: Responsive overrides
+// ======================================
+$fw-colors-responsive: true;
+
+// Typo Module: Base font-size
+// ======================================
+$fw-typo-base: (
+   'default': 16px,
+   'sm': 18px,
+   'lg': 20px
+) !default;
+
+// Typo Module: Ratio
+// ======================================
+$fw-typo-ratio: 1.2 !default;
+
+// Typo Module: Sizes
+// ======================================
+$fw-typo-sizes: (
+   'xxs': -3,
+   'xs': -2,
+   's': -1,
+   'm': 0,
+   'l': 1,
+   'xl': 2,
+   'xxl': 3,
+   'xxxl': 4
+) !default;
+
+// Typo Module: Responsive overrides
+// ======================================
+$fw-typo-responsive: true !default;

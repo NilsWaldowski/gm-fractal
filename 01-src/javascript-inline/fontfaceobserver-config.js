@@ -9,11 +9,10 @@
         return;
     }
 
-    var openSans = new FontFaceObserver('Open Sans'),
-        ubuntuCondensed = new FontFaceObserver('Ubuntu Condensed');
+    var openSans = new FontFaceObserver('Open Sans');
 
     w.Promise
-        .all([openSans.load(), ubuntuCondensed.load()])
+        .all([openSans.load()])
         .then(function() {
             cookie('fonts-loaded', 'true', 7);
             w.document.documentElement.className += ' fonts-loaded';
