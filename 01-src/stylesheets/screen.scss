@@ -41,19 +41,12 @@
 
 
 /* ==========================================================================
-   Helpers (e.g. h-clearfix)
+   Utilities and helper classes
    ========================================================================== */
-@import '6-helpers/.importer';
-
-
-/* ==========================================================================
-   Utilities and helper classes with ability to override anything which goes
-   before in the triangle (declarations in this layer will carry !important)
-   ========================================================================== */
-@import '7-utilities/.importer';
+@import '6-utilities/.importer';
 
 
 /* ==========================================================================
    Additional vendor libraries which must be be overwritten for the most part
    ========================================================================== */
-@import '8-vendor/.importer';
+@import '7-vendor/.importer';
