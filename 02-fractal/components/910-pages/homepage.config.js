@@ -8,6 +8,16 @@ module.exports = {
 
         formData: {
             fieldTextLabel: 'Label from Homepage Data'
+        },
+
+        persons: {
+            person: [
+                {
+                    name: 'Überschriebene Person!',
+                    company: 'Homepage',
+                    quote: 'Einfach so!'
+                }
+            ]
         }
     }
 };
