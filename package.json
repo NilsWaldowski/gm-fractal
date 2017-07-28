@@ -19,8 +19,6 @@
         "cps-scss-framework": "^0.2.0",
         "fastclick": "^1.0.6",
         "fastdom": "^1.0.6",
-        "lodash": "^4.17.4",
-        "moment": "^2.18.1",
         "wolfy87-eventemitter": "^5.2.1",
         "jquery": ""
     },
