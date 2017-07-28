@@ -45,15 +45,17 @@ gulp.task('fractal:build', function(){
 /**
 * Init Assets
 */
-gulp.task('init', gulp.parallel(
-    'stylesheets',
-    'javascript',
-    'javascriptInline',
-    'modernizr',
-    'images',
-    'icons',
-    'misc',
-    'fonts'
+gulp.task('init', gulp.series('clean',
+    gulp.parallel(
+        'stylesheets',
+        'javascript',
+        'javascriptInline',
+        'modernizr',
+        'images',
+        'icons',
+        'misc',
+        'fonts'
+    )
 ));
 
 
