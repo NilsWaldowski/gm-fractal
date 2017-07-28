@@ -17,6 +17,12 @@ fractal.docs.set('path', __dirname + '/02-fractal/docs');
 fractal.set('project.title', 'CPS-IT GoldenMaster');
 
 // Components config
+const engineInstance = fractal.components.engine();
+
+// Using handlebars-layouts (https://www.npmjs.com/package/handlebars-layouts)
+const layouts = require('handlebars-layouts');
+layouts.register(engineInstance.handlebars);
+
 fractal.components.set('default.preview', '@preview');
 
 // Build - will be deployed by jenkins or manually for public project visibility
