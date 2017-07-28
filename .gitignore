@@ -7,12 +7,9 @@
 logs
 npm-debug.log
 node_modules
-build
 _backup
-dist
+dest
 public
-public_deploy
-scss-framework
 
 #
 # Ignore OS specific system files (Thumbs.db, .DS_Store, etc.)

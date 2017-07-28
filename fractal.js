@@ -19,13 +19,14 @@ fractal.set('project.title', 'CPS-IT GoldenMaster');
 // Components config
 fractal.components.set('default.preview', '@preview');
 
-// build
-fractal.web.set('builder.dest', __dirname + '/build');
+// Build - will be deployed by jenkins or manually for public project visibility
+fractal.web.set('builder.dest', __dirname + '/public');
 
 /*
 * Assets
 */
-fractal.web.set('static.path', __dirname + '/public');
+fractal.web.set('static.path', __dirname + '/dest');
+// match /dest path with deploy environment in TYPO3
 fractal.web.set('static.mount', '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend');
 
 fractal.web.set('server.syncOptions', {
