@@ -2,32 +2,9 @@
    Global Typography Definitions
    ========================================================================== */
 body {
-    line-height: 1;
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    /*
-    font-family: $base-font-family--fallback;
-    font-size: 1.05rem;
-    line-height: 1.5;
-
-    @include bp(sm) {
-        font-size: 1.1rem;
-    }
-
-    @include bp(xxl) {
-        font-size: 1.2rem;
-    }
-
-    .fonts-loaded & {
-        font-family: $base-font-family;
-    }
-
-    small {
-        font-size: .7rem;
-    }
-    */
 }
 
 i,
