@@ -81,3 +81,8 @@ gulp.task('default', gulp.series('init', 'watch-and-serve'))
 * Deploy
 */
 gulp.task('deploy', gulp.series('build', 'copyBuild'))
+
+/**
+* Jenkins
+*/
+gulp.task('jenkins', gulp.series('build', 'fractal:build'))
