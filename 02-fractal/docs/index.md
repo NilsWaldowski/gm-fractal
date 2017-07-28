@@ -1,4 +1,4 @@
 ---
-title: FooCorp Components
+title: CPS-IT GoldenMaster Docs
 ---
-This is the component library for FooCorp. **Feel free to look around!**
+This is the CPS-IT GoldenMaster. **Feel free to look around!**
