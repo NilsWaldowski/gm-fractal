@@ -6,9 +6,8 @@ module.exports = {
     context: {
         homepageTitle: 'HomepageTest',
 
-        additionalData: {
-            textInputLabel: 'Label from Homepage',
-            textInputPlaceholder: 'Placeholder from Homepage'
+        formData: {
+            fieldTextLabel: 'Label from Homepage Data'
         }
     }
 };

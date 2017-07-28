@@ -1,0 +1,453 @@
+/* ==========================================================================
+   Form
+   ========================================================================== */
+
+// FIELDSETS
+$form-fieldset-space-after:             3rem;
+
+
+// LEGENDS
+$form-legend-space-after:               1rem;
+$form-legend-color:                     inherit;
+
+
+// GROUPS
+$form-group-space-after:                1rem;
+
+
+// LABELS
+$form-label-space-after:                .5rem;
+$form-label-color:                      inherit;
+
+
+// FIELDS
+$form-field-spacing-inner-y:            .8rem;
+$form-field-spacing-inner-x:            .5rem;
+$form-field-border-color:               color('g2');
+$form-field-border-radius:              0;
+$form-field-border-focus-color:         color('g4');
+$form-field-background-focus-color:     color('g4');
+$form-field-background-focus-background: color('white');
+$form-field-input-color:                inherit;
+$form-field-input-focus-color:          inherit;
+$form-field-input-background:           color('white');
+$form-field-select-background:          color('white');
+$form-field-icon-color:                 color('g3');
+$form-field-icon-focus-color:           color('g4');
+$form-field-select-icon-color:          color('brand-red');
+$form-field-select-icon-focus-color:    color('g4');
+$form-field-checkfields-color:          color('brand-red'); // Checkbox and Radio
+$form-field-checkfields-space-after:    .25rem;
+
+
+// PLACEHOLDER
+$form-placeholder-color:                color('g4');
+$form-placeholder-focus-color:          color('g4');
+
+
+// MSG
+$form-msg-space-before:                 .35rem;
+$form-msg-color:                        inherit;
+
+// TEXT
+$form-text-space-after:                 1.5rem;
+
+
+/* ==========================================================================
+
+   ========================================================================== */
+.c-form {
+
+
+    &__fieldset {
+        border: 0;
+
+        + .c-form__fieldset {
+            margin-top: $form-fieldset-space-after;
+        }
+    }
+
+
+
+    &__legend {
+        //@extend %c-typo\:m;
+        //@extend %c-typo\:bold;
+        margin-bottom: $form-legend-space-after;
+    }
+
+
+
+    &__group {
+        margin-bottom: $form-group-space-after;
+    }
+
+
+
+    &__label,
+    &__checkfields legend { // legends for checkbox/radio fieldsets
+        //@extend %c-typo\:xs;
+        //@extend %c-typo\:bold;
+        display: inline-block;
+        margin-bottom: $form-label-space-after;
+    }
+
+
+
+    // container in order to position a optional icon
+    &__input-container {
+        position: relative;
+    }
+
+
+
+    &__input {
+        //@extend %c-typo\:s;
+        display: block;
+        border: 1px solid;
+        width: 100%;
+        max-width: 100%;
+        padding: $form-field-spacing-inner-y $form-field-spacing-inner-x;
+        outline: none; // Important: provide fallback!
+
+        &:not([type='checkbox']),
+        &:not([type='radio']) {
+            border-radius: $form-field-border-radius;
+        }
+
+        &:focus {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+        }
+
+        // hide IE clear input button
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: $form-field-spacing-inner-y;
+        height: 100%;
+        pointer-events: none;
+        cursor: pointer;
+
+        svg {
+            width: auto;
+            height: 100%;
+        }
+
+        &__select-arrow {
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            border-style: solid;
+            border-width: 8px 5px 0;
+            position: relative;
+            top: 50%;
+            margin-top: -4px;
+        }
+    }
+
+
+
+    &__msg {
+        //@extend %c-typo\:xs;
+        display: block;
+        margin-top: $form-msg-space-before;
+    }
+
+
+
+    /**
+     * Textarea
+     */
+    textarea {
+        width: 100% !important; // important necessary for FF
+        height: 10rem;
+        font-family: inherit;
+    }
+
+
+
+    /**
+     * Select
+     */
+    select {
+        appearance: none;
+        padding-right: $form-field-spacing-inner-y * 3;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+
+    /**
+     * Checkbox & Radio Buttons
+     */
+    &__checkfields {
+
+        label {
+            //@extend %c-typo\:s;
+            display: block;
+            user-select: none;
+            padding-left: 30px;
+            cursor: pointer;
+            margin-bottom: $form-field-checkfields-space-after;
+        }
+
+        input {
+            //@include accessibility; // @TODO
+            border: 0 !important;
+            clip: rect(0 0 0 0) !important;
+            height: 1px !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: absolute !important;
+            width: 1px !important;
+
+
+            &:checked ~ .c-form__custom-control {
+
+                &:after {
+                    display: block;
+                }
+            }
+
+            &[type=radio] ~ .c-form__custom-control {
+                border-radius: 50%;
+
+                &:after {
+                    left: 4px;
+                    top: 4px;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                }
+            }
+
+            &[type=checkbox] ~ .c-form__custom-control {
+
+                &:after {
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .c-form__custom-control {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            margin: 2px;
+            border: 1px solid;
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: none;
+
+                // Checkbox
+                left: 5px;
+                top: 3px;
+                width: 5px;
+                height: 8px;
+                border: solid;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: $form-text-space-after;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Theme (Colors / Messages / Validation)
+   ========================================================================== */
+.c-form {
+
+
+    legend {
+        color: $form-legend-color;
+    }
+
+
+
+    label {
+        color: $form-label-color;
+    }
+
+
+
+    /**
+     * Placeholder
+     */
+    ::-webkit-input-placeholder {
+        color: $form-placeholder-color;
+    }
+
+    ::-moz-placeholder {
+        color: $form-placeholder-color;
+    }
+
+    :-moz-placeholder {
+        /* Older versions of Firefox */
+        color: $form-placeholder-color;
+    }
+
+    :-ms-input-placeholder {
+        color: $form-placeholder-color;
+    }
+
+
+
+    /**
+     * Validation Colors
+     */
+    &__group {
+        &.is-validated {
+
+            .c-form__msg {
+                color: color('positive');
+            }
+
+            .c-form__input,
+            .c-form__custom-control {
+                border-color: color('positive');
+            }
+        }
+
+        &.has-error {
+            .c-form__msg {
+                color: color('negative');
+            }
+
+            .c-form__input,
+            .c-form__custom-control {
+                border-color: color('negative');
+            }
+        }
+    }
+
+
+
+    &__input {
+        background-color: $form-field-input-background;
+        border-color: $form-field-border-color;
+        color: $form-field-input-color;
+
+        &:focus {
+            border-color: $form-field-border-focus-color;
+            background-color: $form-field-background-focus-background;
+            color: $form-field-input-focus-color;
+
+
+
+            /**
+             * Placeholder
+             */
+            &::-webkit-input-placeholder {
+                color: $form-placeholder-focus-color;
+            }
+
+            &::-moz-placeholder {
+                color: $form-placeholder-focus-color;
+            }
+
+            &:-moz-placeholder {
+                /* Older versions of Firefox */
+                color: $form-placeholder-focus-color;
+            }
+
+            &:-ms-input-placeholder {
+                color: $form-placeholder-focus-color;
+            }
+
+
+
+            /**
+             * Icon
+             */
+            ~ .c-form__icon {
+
+                svg {
+                    fill: $form-field-icon-focus-color;
+                }
+
+                .c-form__icon__select-arrow {
+                    border-color: $form-field-select-icon-focus-color transparent transparent;
+                }
+            }
+        }
+    }
+
+
+
+    &__icon {
+
+        svg {
+            fill: $form-field-icon-color;
+        }
+
+        &__select-arrow {
+            border-color: $form-field-select-icon-color transparent transparent;
+        }
+    }
+
+
+
+    &__msg {
+        color: $form-msg-color;
+    }
+
+
+
+    /**
+     * Select
+     */
+    select {
+        background-color: $form-field-select-background;
+    }
+
+
+
+    /**
+     * Checkbox & Radio Buttons
+     */
+    &__checkfields {
+
+        input {
+
+            &:active,
+            &:focus {
+                ~ .c-form__custom-control {
+                    border-color: $form-field-border-focus-color;
+                }
+            }
+
+            &[type=radio] ~ .c-form__custom-control:after {
+                background-color: $form-field-checkfields-color;
+            }
+        }
+
+        .c-form__custom-control {
+            border-color: $form-field-border-color;
+
+            &:after {
+                border-color: $form-field-checkfields-color; // Checkbox and Radio
+            }
+        }
+    }
+}
