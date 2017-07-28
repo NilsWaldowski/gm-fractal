@@ -1,0 +1,104 @@
+<!-- Short description of the page (limit to 150 characters) -->
+<!-- In *some* situations this description is used as a part of the snippet shown in the search results. -->
+<meta name="description" content="{{ description }}">
+
+<!-- Control the behavior of search engine crawling and indexing -->
+<meta name="robots" content="noindex, nofollow, noodp"><!-- All Search Engines -->
+<meta name="googlebot" content="noindex, nofollow"><!-- Google Specific -->
+
+<!-- Tells Google not to show the sitelinks search box -->
+<meta name="google" content="nositelinkssearchbox">
+
+<!-- Tells Google not to provide a translation for this page -->
+<meta name="google" content="notranslate">
+
+<!-- Verify ownership for Google Search Console -->
+<meta name="google-site-verification" content="verification_token">
+
+<!-- Used to name software used to build the website (i.e. - WordPress, Dreamweaver) -->
+<meta name="generator" content="Patternlab">
+
+<!-- Short description of your site's subject -->
+<meta name="subject" content="your website's subject">
+
+<!-- Very short (10 words or less) description. Primarily for academic papers -->
+<meta name="abstract" content="">
+
+<!-- Full domain name or web address -->
+<meta name="url" content="{{ domain }}">
+
+<!-- Gives a general age rating based on sites content -->
+<meta name="rating" content="General">
+
+<!-- Allows control over how referrer information is passed -->
+<meta name="referrer" content="no-referrer">
+
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no">
+
+
+<!-- Favicon -->
+<!-- For IE 10 and below -->
+<!-- No link, just place a file called favicon.ico in the root directory -->
+<link rel="shortcut icon" href="{{ img.favicon.ico }}">
+
+<!-- For IE 11, Chrome, Firefox, Safari, Opera -->
+<link rel="icon" href="{{ img.favicon.s16 }}" sizes="16x16" type="image/png">
+<link rel="icon" href="{{ img.favicon.s32 }}" sizes="32x32" type="image/png">
+<link rel="icon" href="{{ img.favicon.s48 }}" sizes="48x48" type="image/png">
+<link rel="icon" href="{{ img.favicon.s62 }}" sizes="62x62" type="image/png">
+<link rel="icon" href="{{ img.favicon.s192 }}" sizes="192x192" type="image/png">
+<!-- More info: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
+
+
+<!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<!-- Open Graph: http://ogp.me/ -->
+<meta property="fb:app_id" content="">
+<meta property="og:url" content="{{ domain }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:image" content="{{ domain }}{{ img.share }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:site_name" content="">
+<meta property="og:locale" content="de_DE">
+<meta property="article:author" content="">
+
+
+<!-- More info: https://dev.twitter.com/cards/getting-started -->
+<!-- Validate: https://dev.twitter.com/docs/cards/validation/validator -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@site_account">
+<meta name="twitter:creator" content="@individual_account">
+<meta name="twitter:url" content="{{ domain }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ domain }}{{ img.share }}">
+
+
+<!-- Google Plus -->
+<meta itemprop="name" content="{{ title }}">
+<meta itemprop="description" content="{{ description }}">
+<meta itemprop="image" content="{{ domain }}{{ img.share }}">
+
+
+<!-- Apple -->
+<!-- Add to Home Screen -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="App Title">
+
+<!-- Touch Icons -->
+<!-- In most cases, one 180×180px touch icon in the head is enough -->
+<link rel="apple-touch-icon" href="{{ img.apple.touch }}">
+
+<!-- Utilize the different icon sizes if you would want unique icons -->
+<!-- determined by device. -->
+<link rel="apple-touch-icon" sizes="57x57" href="{{ img.apple.touch }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ img.apple.touch }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ img.apple.touch }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ img.apple.touch }}">
+
+
+<!-- Apple Safari Pinned Site (the image needs to be a square SVG image, with a transparent
+(or simply: no) background, and all vectors 100% black) -->
+<link rel="mask-icon" href="" color="black">
