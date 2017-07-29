@@ -24,6 +24,7 @@
     },
     "devDependencies": {
         "@frctl/fractal": "^1.1.5",
+        "@frctl/mandelbrot": "^1.1.0",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.1",
         "babel-plugin-transform-runtime": "^6.23.0",
@@ -60,6 +61,7 @@
         "src": "./01-src",
         "dest": "./dest",
         "dist": "../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend",
+        "assets": "/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend",
         "stylesheets": {
             "src": "stylesheets",
             "dest": "stylesheets"
