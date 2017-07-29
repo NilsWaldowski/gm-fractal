@@ -1,7 +1,7 @@
 // https://gist.github.com/unruthless/413930
-
 sub,
 sup {
+
     /* Specified in % so that the sup/sup is the
        right size relative to the surrounding text */
     font-size: 75%;
@@ -20,11 +20,13 @@ sup {
 }
 
 sup {
+
     /* Move the superscripted text up */
     top: -.5em;
 }
 
 sub {
+
     /* Move the subscripted text down, but only
        half as far down as the superscript moved up */
     bottom: -.25em;

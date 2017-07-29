@@ -220,7 +220,7 @@ $form-text-space-after:                 1.5rem;
                 }
             }
 
-            &[type=radio] ~ .c-form__custom-control {
+            &[type='radio'] ~ .c-form__custom-control {
                 border-radius: 50%;
 
                 &:after {
@@ -232,7 +232,7 @@ $form-text-space-after:                 1.5rem;
                 }
             }
 
-            &[type=checkbox] ~ .c-form__custom-control {
+            &[type='checkbox'] ~ .c-form__custom-control {
 
                 &:after {
                     border-width: 0 2px 2px 0;
@@ -294,20 +294,7 @@ $form-text-space-after:                 1.5rem;
     /**
      * Placeholder
      */
-    ::-webkit-input-placeholder {
-        color: $form-placeholder-color;
-    }
-
-    ::-moz-placeholder {
-        color: $form-placeholder-color;
-    }
-
-    :-moz-placeholder {
-        /* Older versions of Firefox */
-        color: $form-placeholder-color;
-    }
-
-    :-ms-input-placeholder {
+    ::placeholder {
         color: $form-placeholder-color;
     }
 
@@ -317,6 +304,7 @@ $form-text-space-after:                 1.5rem;
      * Validation Colors
      */
     &__group {
+
         &.is-validated {
 
             .c-form__msg {
@@ -330,6 +318,7 @@ $form-text-space-after:                 1.5rem;
         }
 
         &.has-error {
+
             .c-form__msg {
                 color: color('negative');
             }
@@ -358,20 +347,7 @@ $form-text-space-after:                 1.5rem;
             /**
              * Placeholder
              */
-            &::-webkit-input-placeholder {
-                color: $form-placeholder-focus-color;
-            }
-
-            &::-moz-placeholder {
-                color: $form-placeholder-focus-color;
-            }
-
-            &:-moz-placeholder {
-                /* Older versions of Firefox */
-                color: $form-placeholder-focus-color;
-            }
-
-            &:-ms-input-placeholder {
+            &::placeholder {
                 color: $form-placeholder-focus-color;
             }
 
@@ -432,12 +408,13 @@ $form-text-space-after:                 1.5rem;
 
             &:active,
             &:focus {
+
                 ~ .c-form__custom-control {
                     border-color: $form-field-border-focus-color;
                 }
             }
 
-            &[type=radio] ~ .c-form__custom-control:after {
+            &[type='radio'] ~ .c-form__custom-control:after {
                 background-color: $form-field-checkfields-color;
             }
         }
