@@ -7,9 +7,6 @@ const logger = fractal.cli.console // keep a reference to the fractal CLI consol
 /* Set the title of the project */
 fractal.set('project.title', 'FooCorp Component Library')
 
-/* Tell Fractal where the components will live */
-fractal.components.set('path', __dirname + '/02-fractal/components')
-
 /* Tell Fractal where the documentation pages will live */
 fractal.docs.set('path', __dirname + '/02-fractal/docs')
 
@@ -24,6 +21,8 @@ const layouts = require('handlebars-layouts')
 layouts.register(engineInstance.handlebars)
 
 fractal.components.set('default.preview', '@preview')
+fractal.components.set('default.status', 'wip')
+fractal.components.set('path', __dirname + '/02-fractal/components')
 
 // Build - will be deployed by jenkins or manually for public project visibility
 fractal.web.set('builder.dest', __dirname + '/public')
