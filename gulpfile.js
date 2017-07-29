@@ -67,20 +67,24 @@ gulp.task('build', gulp.series(function(done) {
     done()
 }, 'init'))
 
+
 /**
 * Watchs Assets & Start Fractal Browser-Sync
 */
 gulp.task('watch-and-serve', gulp.parallel('watch', 'fractal:start'))
+
 
 /**
 * Init Assets and start Watcher & Fractal Browser-Sync afterwards
 */
 gulp.task('default', gulp.series('init', 'watch-and-serve'))
 
+
 /**
 * Deploy
 */
 gulp.task('deploy', gulp.series('build', 'copyBuild'))
+
 
 /**
 * Jenkins
