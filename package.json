@@ -131,7 +131,8 @@
             "extensions": [
                 "jpg",
                 "png",
-                "gif"
+                "gif",
+                "ico"
             ]
         },
         "fonts": {
