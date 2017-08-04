@@ -1,15 +1,15 @@
 <h1>{{homepageTitle}}</h1>
 
 
-<h3>Include form-example but without the data provided by the component itself</h2>
+<h3 class="">Include form-example but without the data provided by the component itself</h3>
 {{> '@form-example'}}
 
 <hr />
 
-<h3>Include form-example with the the data provided by the component itself</h2>
+<h3 class="o-conent">Include form-example with the the data provided by the component itself</h3>
 {{render '@form-example' formData merge=true}}
 
 <hr />
 
-<h3>Include a list but add new data to the component</h2>
+<h3>Include a list but add new data to the component</h3>
 {{render '@person-list' persons merge=false}}

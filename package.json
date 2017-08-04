@@ -60,8 +60,9 @@
     "paths": {
         "src": "./01-src",
         "dest": "./dest",
-        "dist": "../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend",
-        "assets": "/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend",
+        "dist": "../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default",
+        "assets": "/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default",
+        "domain:": "http://gm8-lab.cps-projects.de",
         "stylesheets": {
             "src": "stylesheets",
             "dest": "stylesheets"

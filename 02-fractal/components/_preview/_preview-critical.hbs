@@ -14,45 +14,42 @@
     <!-- Meta Tags / Social Sharing / Annotations -->
     {{render '@meta-tags' additionalData merge=true}}
 
-    <!-- Prefetching, preloading, prebrowsing -->
-    <link rel="prefetch" href="/typo3conf/ext/bc_sitepackage/Resources/Public/_Default/icons/sprite/sprite.svg">
-
     <!-- Inline: Above the fold inline CSS -->
-    <!-- link href='{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}' rel='stylesheet' type='text/css' -->
+    <!-- link href='{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/stylesheets/screen.css' }}' rel='stylesheet' type='text/css' -->
 
     <!-- NO JS CSS Include Fallback -->
     <noscript>
-        <link href='{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}' rel='stylesheet' type='text/css'>
+        <link href='{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/stylesheets/screen.css' }}' rel='stylesheet' type='text/css'>
     </noscript>
 
     <!-- Inline: Modernizr -->
-    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/modernizr-custom.js' }}"></script>
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/javascript-inline/modernizr-custom.js' }}"></script>
 
     <!-- Inline: Cookie Helper Lib -->
-    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/cookie.js' }}"></script>
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/javascript-inline/cookie.js' }}"></script>
 
     <!-- Inline: Font Loading Lib -->
-    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/fontfaceobserver.js' }}"></script>
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/javascript-inline/fontfaceobserver.js' }}"></script>
 
     <!-- Inline: Font Loading Configuration -->
-    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/fontfaceobserver-config.js' }}"></script>
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/javascript-inline/fontfaceobserver-config.js' }}"></script>
 
     <!-- Inline: Settings for BE/FE Communication and fractal specifics -->
-    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript-inline/projectSettings.js' }}"></script>
+    <script src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/javascript-inline/projectSettings.js' }}"></script>
 </head>
 <body>
 
 {{{ yield }}}
 
 <!-- Async: Main Js Bundle -->
-<script async src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/javascript/bundle.js' }}"></script>
+<script async src="{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/javascript/bundle.js' }}"></script>
 
 <!-- Generate stylesheet link tag dynamically -->
 <script>
     var cb = function() {
             var e = document.createElement('link');
             e.rel = 'stylesheet';
-            e.href = '{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/_Default/Frontend/stylesheets/screen.css' }}';
+            e.href = '{{ path '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default/stylesheets/screen.css' }}';
             var t = document.getElementsByTagName('head')[0];
             t.appendChild(e)
         },
