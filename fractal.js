@@ -21,7 +21,7 @@ layouts.register(engineInstance.handlebars)
 
 fractal.components.set('default.preview', '@preview')
 fractal.components.set('default.status', 'wip')
-fractal.components.set('path', __dirname + '/02-fractal/components')
+fractal.components.set('path', __dirname + '/02-fractal/src')
 
 
 /*

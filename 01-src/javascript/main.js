@@ -47,3 +47,6 @@ fastclick.attach(document.body);
 */
 import module from './modules/moduleExample'
 module();
+
+import moduleExample2 from './modules/moduleExample2'
+moduleExample2();

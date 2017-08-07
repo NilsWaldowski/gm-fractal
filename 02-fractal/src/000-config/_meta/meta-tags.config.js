@@ -1,4 +1,4 @@
-const paths = require('../../../package.json').paths
+const paths = require('../../../../package.json').paths
 
 module.exports = {
     title: 'Page Meta Tags',

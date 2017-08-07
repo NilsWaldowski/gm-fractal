@@ -16,7 +16,7 @@ $fw-features-enabled: (
     'clearfix': true,  // Enable clearfix module.
     'reset-button': true, // Enable reset button module.
     'text-truncate': true // Enable text truncate module.
-) !default;
+);
 
 // Breakpoints: Sizes
 // ======================================
@@ -27,17 +27,17 @@ $fw-breakpoints-sizes: (
     'lg': 1100px,
     'xl': 1300px,
     'xxl': 1700px
-) !default;
+);
 
 // Grid Module: Cols
 // ======================================
 // Number of grid cols to be used.
-$fw-grid-cols: 12 !default;
+$fw-grid-cols: 12;
 
 // Grid Module: Gutter
 // ======================================
 // Size in 'px' on each side of the cols.
-$fw-grid-gutter: 15px !default;
+$fw-grid-gutter: 15px;
 
 // Grid Module: fixed width's
 // ======================================
@@ -48,7 +48,7 @@ $fw-grid-fixed-widths: (
     'lg': 960px,
     'xl': 1100px,
     'xxl': 1200px
-) !default;
+);
 
 // Colors Module: Colors
 // ======================================
@@ -67,11 +67,12 @@ $fw-colors: (
     'caution':     #a59b15,
     'negative':    #b12a0b,
     'neutral':     #0192d0
-) !default;
+);
 
 // Colors Module: Responsive overrides
 // ======================================
 $fw-colors-responsive: true;
+
 
 // Typo Module: Base font-size
 // ======================================
@@ -79,11 +80,11 @@ $fw-typo-base: (
     'default': 16px,
     'sm': 18px,
     'lg': 20px
-) !default;
+);
 
 // Typo Module: Ratio
 // ======================================
-$fw-typo-ratio: 1.2 !default;
+$fw-typo-ratio: 1.2;
 
 // Typo Module: Sizes
 // ======================================
@@ -96,8 +97,8 @@ $fw-typo-sizes: (
     'xl': 2,
     'xxl': 3,
     'xxxl': 4
-) !default;
+);
 
 // Typo Module: Responsive overrides
 // ======================================
-$fw-typo-responsive: true !default;
+$fw-typo-responsive: true;

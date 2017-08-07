@@ -1,230 +1,230 @@
 {
-    "name": "cps-project-setup",
-    "version": "0.1.0",
-    "description": "",
-    "author": "",
-    "engines": {
-        "npm": ">=5",
-        "node": ">=6.11.0"
+  "name": "cps-project-setup",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "engines": {
+    "npm": ">=5",
+    "node": ">=6.11.0"
+  },
+  "scripts": {
+    "start": "npm run build -s && npm run execute -s",
+    "prebuild": "del-cli public -f",
+    "build": "webpack",
+    "execute": "node public/javascript/bundle.js",
+    "watch": "webpack --watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cps-scss-framework": "^0.2.0",
+    "fastclick": "^1.0.6",
+    "fastdom": "^1.0.6",
+    "jquery": "^3.2.1",
+    "wolfy87-eventemitter": "^5.2.1"
+  },
+  "devDependencies": {
+    "@frctl/fractal": "^1.1.5",
+    "@frctl/mandelbrot": "^1.1.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chalk": "^2.0.1",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.1.1",
+    "eslint-loader": "^1.9.0",
+    "fancy-log": "^1.3.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-changed": "^3.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "gulp-stylelint": "^4.0.0",
+    "gulp-svg-sprite": "^1.3.7",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "handlebars-layouts": "^3.1.4",
+    "node-emoji": "^1.7.0",
+    "require-dir": "^0.3.2",
+    "stylelint-config-standard": "^17.0.0",
+    "webpack": "^3.0.0",
+    "webpack2-stream-watch": "^3.2.2"
+  },
+  "paths": {
+    "src": "./01-src",
+    "dest": "./dest",
+    "dist": "../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default",
+    "assets": "/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default",
+    "domain:": "http://gm8-lab.cps-projects.de",
+    "stylesheets": {
+      "src": "stylesheets",
+      "dest": "stylesheets"
     },
-    "scripts": {
-        "start": "npm run build -s && npm run execute -s",
-        "prebuild": "del-cli public -f",
-        "build": "webpack",
-        "execute": "node public/javascript/bundle.js",
-        "watch": "webpack --watch"
+    "javascript": {
+      "src": "javascript",
+      "dest": "javascript"
     },
-    "license": "MIT",
-    "dependencies": {
-        "cps-scss-framework": "^0.2.0",
-        "fastclick": "^1.0.6",
-        "fastdom": "^1.0.6",
-        "jquery": "",
-        "wolfy87-eventemitter": "^5.2.1"
+    "javascriptInline": {
+      "src": "javascript-inline",
+      "dest": "javascript-inline"
     },
-    "devDependencies": {
-        "@frctl/fractal": "^1.1.5",
-        "@frctl/mandelbrot": "^1.1.0",
-        "babel-core": "^6.25.0",
-        "babel-loader": "^7.1.1",
-        "babel-plugin-transform-runtime": "^6.23.0",
-        "babel-polyfill": "^6.23.0",
-        "babel-preset-es2015": "^6.24.1",
-        "chalk": "^2.0.1",
-        "del-cli": "^1.1.0",
-        "eslint": "^4.1.1",
-        "eslint-loader": "^1.9.0",
-        "fancy-log": "^1.3.0",
-        "gulp": "gulpjs/gulp#4.0",
-        "gulp-autoprefixer": "^4.0.0",
-        "gulp-changed": "^3.1.0",
-        "gulp-cssnano": "^2.1.2",
-        "gulp-if": "^2.0.2",
-        "gulp-imagemin": "^3.3.0",
-        "gulp-modernizr": "^1.0.0-alpha",
-        "gulp-notify": "^3.0.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
-        "gulp-sourcemaps": "^2.5.1",
-        "gulp-stylelint": "^4.0.0",
-        "gulp-svg-sprite": "^1.3.7",
-        "gulp-uglify": "^3.0.0",
-        "gulp-watch": "^4.3.11",
-        "handlebars-layouts": "^3.1.4",
-        "node-emoji": "^1.7.0",
-        "require-dir": "^0.3.2",
-        "stylelint-config-standard": "^17.0.0",
-        "webpack": "^3.0.0",
-        "webpack2-stream-watch": "^3.2.2"
+    "images": {
+      "src": "images",
+      "dest": "images"
     },
-    "paths": {
-        "src": "./01-src",
-        "dest": "./dest",
-        "dist": "../httpdocs/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default",
-        "assets": "/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default",
-        "domain:": "http://gm8-lab.cps-projects.de",
-        "stylesheets": {
-            "src": "stylesheets",
-            "dest": "stylesheets"
-        },
-        "javascript": {
-            "src": "javascript",
-            "dest": "javascript"
-        },
-        "javascriptInline": {
-            "src": "javascript-inline",
-            "dest": "javascript-inline"
-        },
-        "images": {
-            "src": "images",
-            "dest": "images"
-        },
-        "icons": {
-            "src": "icons",
-            "dest": "icons"
-        },
-        "fonts": {
-            "src": "fonts",
-            "dest": "fonts"
-        },
-        "misc": {
-            "src": "misc",
-            "dest": "misc"
-        }
+    "icons": {
+      "src": "icons",
+      "dest": "icons"
     },
-    "taskConfig": {
-        "stylesheets": {
-            "extensions": [
-                "sass",
-                "scss",
-                "css"
-            ],
-            "autoprefixer": {
-                "browsers": [
-                    "> 1% in DE",
-                    "Android >= 4.1",
-                    "Explorer >= 9",
-                    "Firefox >= 17",
-                    "iOS >= 6",
-                    "last 4 versions",
-                    "Opera >= 12.1",
-                    "Safari >= 7"
-                ],
-                "cascade": true
-            },
-            "sass": {
-                "outputStyle": "expanded"
-            },
-            "styleLint": {
-                "reporters": [
-                    {
-                        "formatter": "string",
-                        "console": true
-                    }
-                ]
-            },
-            "cssnano": {},
-            "rename": {
-                "suffix": ".min"
-            }
-        },
-        "images": {
-            "extensions": [
-                "jpg",
-                "png",
-                "gif",
-                "ico"
-            ]
-        },
-        "fonts": {
-            "extensions": [
-                "woff2",
-                "woff",
-                "eot",
-                "ttf",
-                "svg"
-            ]
-        },
-        "javascript": {
-            "extensions": [
-                "js",
-                "jsx"
-            ],
-            "rename": {
-                "suffix": ".min"
-            }
-        },
-        "javascriptInline": {
-            "extensions": [
-                "js",
-                "jsx"
-            ],
-            "rename": {
-                "suffix": ".min"
-            }
-        },
-        "modernizr": {
-            "extensions": [
-                "js",
-                "jsx"
-            ],
-            "outputName": "modernizr.js",
-            "rename": {
-                "suffix": ".min"
-            },
-            "settings": {
-                "cache": true,
-                "options": [
-                    "setClasses",
-                    "addTest",
-                    "testProp",
-                    "fnBind"
-                ],
-                "tests": [
-                    "forms_placeholder",
-                    "history",
-                    "inlinesvg",
-                    "svg",
-                    "touchevents",
-                    "csstransforms",
-                    "csstransforms3d",
-                    "cssvwunit",
-                    "video"
-                ]
-            }
-        },
-        "misc": {
-            "extensions": [
-                "mp4",
-                "webm"
-            ]
-        },
-        "icons": {
-            "extensions": [
-                "svg",
-                "ico"
-            ],
-            "settings": {
-                "shape": {
-                    "dimension": {
-                        "maxWidth": 128,
-                        "maxHeight": 128,
-                        "attribute": true
-                    },
-                    "dest": "/"
-                },
-                "mode": {
-                    "viewDEACTIVATED": {
-                        "render": {
-                            "scss": false
-                        }
-                    },
-                    "symbol": {
-                        "dest": "",
-                        "sprite": "sprite.svg"
-                    }
-                }
-            }
-        }
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts"
+    },
+    "misc": {
+      "src": "misc",
+      "dest": "misc"
     }
+  },
+  "taskConfig": {
+    "stylesheets": {
+      "extensions": [
+        "sass",
+        "scss",
+        "css"
+      ],
+      "autoprefixer": {
+        "browsers": [
+          "> 1% in DE",
+          "Android >= 4.1",
+          "Explorer >= 9",
+          "Firefox >= 17",
+          "iOS >= 6",
+          "last 4 versions",
+          "Opera >= 12.1",
+          "Safari >= 7"
+        ],
+        "cascade": true
+      },
+      "sass": {
+        "outputStyle": "expanded"
+      },
+      "styleLint": {
+        "reporters": [
+          {
+            "formatter": "string",
+            "console": true
+          }
+        ]
+      },
+      "cssnano": {},
+      "rename": {
+        "suffix": ".min"
+      }
+    },
+    "images": {
+      "extensions": [
+        "jpg",
+        "png",
+        "gif",
+        "ico"
+      ]
+    },
+    "fonts": {
+      "extensions": [
+        "woff2",
+        "woff",
+        "eot",
+        "ttf",
+        "svg"
+      ]
+    },
+    "javascript": {
+      "extensions": [
+        "js",
+        "jsx"
+      ],
+      "rename": {
+        "suffix": ".min"
+      }
+    },
+    "javascriptInline": {
+      "extensions": [
+        "js",
+        "jsx"
+      ],
+      "rename": {
+        "suffix": ".min"
+      }
+    },
+    "modernizr": {
+      "extensions": [
+        "js",
+        "jsx"
+      ],
+      "outputName": "modernizr.js",
+      "rename": {
+        "suffix": ".min"
+      },
+      "settings": {
+        "cache": true,
+        "options": [
+          "setClasses",
+          "addTest",
+          "testProp",
+          "fnBind"
+        ],
+        "tests": [
+          "forms_placeholder",
+          "history",
+          "inlinesvg",
+          "svg",
+          "touchevents",
+          "csstransforms",
+          "csstransforms3d",
+          "cssvwunit",
+          "video"
+        ]
+      }
+    },
+    "misc": {
+      "extensions": [
+        "mp4",
+        "webm"
+      ]
+    },
+    "icons": {
+      "extensions": [
+        "svg",
+        "ico"
+      ],
+      "settings": {
+        "shape": {
+          "dimension": {
+            "maxWidth": 128,
+            "maxHeight": 128,
+            "attribute": true
+          },
+          "dest": "/"
+        },
+        "mode": {
+          "viewDEACTIVATED": {
+            "render": {
+              "scss": false
+            }
+          },
+          "symbol": {
+            "dest": "",
+            "sprite": "sprite.svg"
+          }
+        }
+      }
+    }
+  }
 }
