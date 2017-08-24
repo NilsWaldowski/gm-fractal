@@ -4,8 +4,8 @@ const requireDir = require('require-dir')
 
 const f = require('./fractal.js')
 
-// Fallback for windows backs out of node_modules folder to root of project
-process.env.PWD = process.env.PWD || path.resolve(process.cwd(), '../../')
+// Fallback for windows
+process.env.PWD = process.env.PWD || path.resolve(process.cwd())
 
 // Globally expose config objects
 const packageJson = require('./package.json')
