@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Breakpoint Match with Javascript with 'font-family-hack'
+        IMPORTANT: every breakpoint is used in order to control the sorting
+        of Media Queries when we use a "Combine Media Queries" Tool (this
+        will be the first "hit" for the Tool and is therefore the leading
+        sorting/order!
+   ========================================================================== */
+html {
+    font-family: 'xxs';
+
+    @include bp(xs) {
+        font-family: 'xs';
+    }
+
+    @include bp(sm) {
+        font-family: 'sm';
+    }
+
+    @include bp(md) {
+        font-family: 'md';
+    }
+
+    @include bp(lg) {
+        font-family: 'lg';
+    }
+
+    @include bp(xl) {
+        font-family: 'xl';
+    }
+
+    @include bp(xxl) {
+        font-family: 'xxl';
+    }
+}
+
+body:after {
+    content: 'xxs';
+    display: none;
+
+    @include bp(xs) {
+        content: 'xs';
+    }
+
+    @include bp(sm) {
+        content: 'sm';
+    }
+
+    @include bp(md) {
+        content: 'md';
+    }
+
+    @include bp(lg) {
+        content: 'lg';
+    }
+
+    @include bp(xl) {
+        content: 'xl';
+    }
+
+    @include bp(xxl) {
+        content: 'xxl';
+    }
+}

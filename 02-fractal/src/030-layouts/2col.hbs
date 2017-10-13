@@ -1,0 +1,21 @@
+{{#extend "@template"}}
+
+    {{#content "content"}}
+
+        <div class="main">
+            {{#block "mainContent"}}
+                main content
+            {{/block}}
+        </div>
+
+        {{#if (content "rightContent")}}
+            <div class="right">
+                {{#block "rightContent"}}
+                    right content
+                {{/block}}
+            </div>
+        {{/if}}
+
+    {{/content}}
+
+{{/extend}}

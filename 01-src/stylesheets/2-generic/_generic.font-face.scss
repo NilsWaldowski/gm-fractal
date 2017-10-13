@@ -1,0 +1,7 @@
+/* ==========================================================================
+   Font File Declaration (@font-face)
+   ========================================================================== */
+@if map-get($project-features-enabled, 'selfhosted-fonts') == true {
+    @include font-face(MyFont, $assetPath + '/fonts/test', null, null, eot otf woff woff2);
+    @include font-face(MyFontBold, $assetPath + '/fonts/testBold', null, null, eot otf woff woff2);
+}

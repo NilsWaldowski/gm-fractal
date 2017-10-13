@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Configuration for SCSS-Framework
+   ========================================================================== */
+
+// enabled modules
+// ======================================
+$fw-features-enabled: (
+    'reset-css': true, // Enable the css-reset module.
+    'normalize-css': false, // Enable css-normalize module.
+    'box-sizing': true, // Enable box-sizing: border-box.
+    'grid': true, // Enable the grid module.
+    'colors': true, // Enable the colors module.
+    'typo': true, // Enable the typography module.
+    'accessibility': true, // Enable accessibility class.
+    'aspect-ratio': true,  // Enable aspect ratio module.
+    'clearfix': true,  // Enable clearfix module.
+    'reset-button': true, // Enable reset button module.
+    'text-truncate': true // Enable text truncate module.
+);
+
+// Breakpoints: Sizes
+// ======================================
+$fw-breakpoints-sizes: (
+    'xs': 500px,
+    'sm': 700px,
+    'md': 900px,
+    'lg': 1100px,
+    'xl': 1300px,
+    'xxl': 1700px
+);
+
+// Grid Module: Cols
+// ======================================
+// Number of grid cols to be used.
+$fw-grid-cols: 12;
+
+// Grid Module: Gutter
+// ======================================
+// Size in 'px' on each side of the cols.
+$fw-grid-gutter: 15px;
+
+// Grid Module: fixed width's
+// ======================================
+$fw-grid-fixed-widths: (
+    'xs': 960px,
+    'sm': 960px,
+    'md': 960px,
+    'lg': 960px,
+    'xl': 1100px,
+    'xxl': 1200px
+);
+
+// Colors Module: Colors
+// ======================================
+$fw-colors: (
+    'brand-red':   #de0026,
+    'white':       #fff,
+    'g1':          #f3f0ed,
+    'g2':          #d9d9d9,
+    'g3':          #a1a1a1,
+    'g4':          #808080,
+    'g5':          #595959,
+    'g6':          #444,
+    'g7':          #222,
+    'black':       #000,
+    'positive':    #03804d,
+    'caution':     #a59b15,
+    'negative':    #b12a0b,
+    'neutral':     #0192d0
+);
+
+// Colors Module: Responsive overrides
+// ======================================
+$fw-colors-responsive: false;
+
+
+// Typo Module: Base font-size
+// ======================================
+$fw-typo-base: (
+    'default': 16px,
+    'sm': 18px,
+    'lg': 20px
+);
+
+// Typo Module: Ratio
+// ======================================
+$fw-typo-ratio: 1.2;
+
+// Typo Module: Sizes (Factor, Line Height)
+// ======================================
+$fw-typo-sizes: (
+    'xxs': (-3, 1.45),
+    'xs': (-2, 1.45),
+    's': (-1, 1.45),
+    'm': (0, 1.45),
+    'l': (1, 1.45),
+    'xl': (2, 1.45),
+    'xxl': (3, 1.45),
+    'xxxl': (4, 1.45)
+);
+
+// Typo Module: Responsive overrides
+// ======================================
+$fw-typo-responsive: false;
+
+// Aspect Ratio Module: Ratios
+// ======================================
+$fw-aspect-ratio-ratios: (
+    '21x9': (21, 9),
+    '16x9': (16, 9)
+);

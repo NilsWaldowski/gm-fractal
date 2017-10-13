@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Global Typography Definitions
+   ========================================================================== */
+body {
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+i,
+cite,
+address,
+em,
+dfn {
+    font-style: italic;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+abbr {
+    border-bottom: 1px dotted;
+
+    &:hover {
+        cursor: help;
+    }
+}

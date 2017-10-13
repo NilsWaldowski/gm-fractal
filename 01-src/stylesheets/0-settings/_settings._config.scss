@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Configuration within the project files
+   ========================================================================== */
+
+// globals
+$assetPath: '/typo3conf/ext/gm8_sitepackage/Resources/Public/Frontend/_Default';
+
+// enabled modules
+// ======================================
+$project-features-enabled: (
+    'selfhosted-fonts': false
+) !default;

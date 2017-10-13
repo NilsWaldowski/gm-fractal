@@ -1,0 +1,31 @@
+{{#extend "@1col"}}
+    {{#content "mainContent"}}
+
+        <div style="margin-bottom: 40px;">
+            <h1>{{homepageTitle}}</h1>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <h3>Include a list with the data provided by the component itself</h3>
+            {{render '@person-list'}}
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <h3>Include a list with the data provided by the component itself and merged with new data</h3>
+            {{render '@person-list' persons merge=true}}
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <h3>Include a list but without the data provided by the component itself and new data</h3>
+            {{> '@person-list'}}
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            {{render '@banner'}}
+            {{render '@banner--warning'}}
+            {{render '@banner--success'}}
+            {{render '@banner--validate'}}
+        </div>
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- #if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="de" class="{{ htmlClass }} fonts-loaded">
+<!-- #else -->
+<html lang="de" class="{{ htmlClass }}">
+<!-- #endif -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Preview Layout</title>
+
+    <!-- Meta Tags / Social Sharing / Annotations -->
+    {{render '@meta-tags' additionalData merge=true}}
+
+    <!-- Assets: CSS & possible prefetch SVGs etc. -->
+    {{render '@assets-head' additionalData merge=true}}
+
+</head>
+<body>
+
+{{{ yield }}}
+
+<!-- Assets: JS -->
+{{render '@assets-footer' additionalData merge=true}}
+
+</body>
+</html>

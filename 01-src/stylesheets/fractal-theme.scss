@@ -1,0 +1,6 @@
+/* stylelint-disable */
+@import '0-settings/.importer';
+
+.Header {
+    background-color: map-get($fw-colors, 'brand-red');
+}
