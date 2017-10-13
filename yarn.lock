@@ -1717,9 +1717,9 @@ cosmiconfig@^2.1.3:
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
 
-cps-scss-framework@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/cps-scss-framework/-/cps-scss-framework-0.2.0.tgz#bd0a4a3f9d3d30dcd656cb43a3c4727a24368d34"
+cps-scss-framework@^0.4.1:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/cps-scss-framework/-/cps-scss-framework-0.4.2.tgz#4eb114ea6e220404fe0f202be72427f77946682f"
 
 create-ecdh@^4.0.0:
   version "4.0.0"

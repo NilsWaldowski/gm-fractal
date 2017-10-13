@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cps-scss-framework": "^0.2.0",
+    "cps-scss-framework": "^0.4.1",
     "fastclick": "^1.0.6",
     "fastdom": "^1.0.6",
     "jquery": "^3.2.1",
