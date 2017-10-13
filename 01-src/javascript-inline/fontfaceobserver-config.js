@@ -16,5 +16,8 @@
         .then(function() {
             cookie('fonts-loaded', 'true', 7);
             w.document.documentElement.className += ' fonts-loaded';
-        });
+        })
+        .catch(function (err) {
+            console.log('fontobserver error: ', err);
+       });
 }(this));
