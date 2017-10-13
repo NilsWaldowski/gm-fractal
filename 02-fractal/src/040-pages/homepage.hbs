@@ -1,15 +1,31 @@
-<h1>{{homepageTitle}}</h1>
+{{#extend "@1col"}}
+    {{#content "mainContent"}}
 
+        <div style="margin-bottom: 40px;">
+            <h1>{{homepageTitle}}</h1>
+        </div>
 
-<h3 class="">Include form-example but without the data provided by the component itself</h3>
-{{> '@form-example'}}
+        <div style="margin-bottom: 30px;">
+            <h3>Include a list with the data provided by the component itself</h3>
+            {{render '@person-list'}}
+        </div>
 
-<hr />
+        <div style="margin-bottom: 30px;">
+            <h3>Include a list with the data provided by the component itself and merged with new data</h3>
+            {{render '@person-list' persons merge=true}}
+        </div>
 
-<h3 class="o-conent">Include form-example with the the data provided by the component itself</h3>
-{{render '@form-example' formData merge=true}}
+        <div style="margin-bottom: 30px;">
+            <h3>Include a list but without the data provided by the component itself and new data</h3>
+            {{> '@person-list'}}
+        </div>
 
-<hr />
+        <div style="margin-bottom: 30px;">
+            {{render '@banner'}}
+            {{render '@banner--warning'}}
+            {{render '@banner--success'}}
+            {{render '@banner--validate'}}
+        </div>
 
-<h3>Include a list but add new data to the component</h3>
-{{render '@person-list' persons merge=false}}
+    {{/content}}
+{{/extend}}

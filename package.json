@@ -8,15 +8,11 @@
     "node": ">=6.11.0"
   },
   "scripts": {
-    "start": "npm run build -s && npm run execute -s",
-    "prebuild": "del-cli public -f",
-    "build": "webpack",
-    "execute": "node public/javascript/bundle.js",
-    "watch": "webpack --watch"
+    "svgson": "svgson -i ./01-src/icons -t -p"
   },
   "license": "MIT",
   "dependencies": {
-    "cps-scss-framework": "^0.2.0",
+    "cps-scss-framework": "^0.4.1",
     "fastclick": "^1.0.6",
     "fastdom": "^1.0.6",
     "jquery": "^3.2.1",
@@ -24,13 +20,16 @@
   },
   "devDependencies": {
     "@frctl/fractal": "^1.1.5",
+    "@frctl/handlebars": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "chalk": "^2.0.1",
+    "del": "^3.0.0",
     "del-cli": "^1.1.0",
     "eslint": "^4.1.1",
     "eslint-loader": "^1.9.0",
@@ -54,6 +53,7 @@
     "node-emoji": "^1.7.0",
     "require-dir": "^0.3.2",
     "stylelint-config-standard": "^17.0.0",
+    "svgson": "^2.1.0",
     "webpack": "^3.0.0",
     "webpack2-stream-watch": "^3.2.2"
   },
@@ -196,7 +196,8 @@
     "misc": {
       "extensions": [
         "mp4",
-        "webm"
+        "webm",
+        "json"
       ]
     },
     "icons": {
@@ -220,7 +221,7 @@
             }
           },
           "symbol": {
-            "dest": "",
+            "dest": "sprite",
             "sprite": "sprite.svg"
           }
         }

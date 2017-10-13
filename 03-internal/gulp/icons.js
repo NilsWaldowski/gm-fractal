@@ -3,9 +3,9 @@ const gulp      = require('gulp')
 const imagemin  = require('gulp-imagemin')
 const svgSprite = require('gulp-svg-sprite')
 const path      = require('path')
-const fancyLog      = require('fancy-log')
-const chalk         = require('chalk')
-const emoji         = require('node-emoji')
+const fancyLog  = require('fancy-log')
+const chalk     = require('chalk')
+const emoji     = require('node-emoji')
 
 const iconsTask = function() {
 
@@ -18,12 +18,16 @@ const iconsTask = function() {
     fancyLog(chalk.bgGreen.white.bold(' ' + emoji.get('heart') + '  ' +
         'Optimize Icons & create Sprite' + ' ' + emoji.get('heart') + '  '))
 
+    /*
+    @TODO: try to implement SVGSON directy to the icon task!
+    */
+
     return gulp.src([paths.src, '*!README.md'])
-        .pipe(changed(paths.dest)) // Ignore unchanged files
+        //.pipe(changed(paths.dest)) // Ignore unchanged files
         .pipe(imagemin())
         .pipe(gulp.dest(paths.dest))
         .pipe(svgSprite(TASK_CONFIG.icons.settings))
-        .pipe(gulp.dest(paths.dest + '/sprite'))
+        .pipe(gulp.dest(paths.dest))
 }
 
 gulp.task('icons', iconsTask)
