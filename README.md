@@ -7,6 +7,7 @@ and a build/deploy setup for a live environment.
 ## Quick Start a Project
 * `git clone` Repository
 * `npm install` - install Dependencies
+* `npm run svgson` write information about all SVGs in '01-src/icons' to a JSON file in order to automate the creation of icon components in fractal
 * `gulp` - start init and watch
 * `gulp deploy` - build assets production ready (for fractal and sitepackage!)
 
@@ -16,7 +17,7 @@ and a build/deploy setup for a live environment.
 * `gulp fonts` copy 'fonts'
 * `gulp misc` copy 'mist' (e.g. videos)
 * `gulp init` build all FE assets
-* `gulp watch-and-serve` just start the watcher and browser-sync without init
+* `gulp watch-and-serve` just start the watcher and browser-sync without init task
 
 ## Features
 
