@@ -1,15 +1,10 @@
 module.exports = {
     title: 'Homepage Component Title',
-
     status: 'prototype',
-
     context: {
         homepageTitle: 'HomepageTest',
 
-        formData: {
-            fieldTextLabel: 'Label from Homepage Data'
-        },
-
+        // merged data
         persons: {
             person: [
                 {
@@ -18,6 +13,20 @@ module.exports = {
                     quote: 'Einfach so!'
                 }
             ]
-        }
+        },
+
+        // new person data for component @person-list
+        person: [
+            {
+                name: 'Max Mustermann',
+                company: 'Lorem ipsum',
+                quote: 'Yes!'
+            },
+            {
+                name: 'Jutta Musterfrau',
+                company: 'dolor sit amet',
+                quote: 'No!'
+            }
+        ]
     }
 };
