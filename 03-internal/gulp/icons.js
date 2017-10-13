@@ -6,7 +6,6 @@ const path      = require('path')
 const fancyLog  = require('fancy-log')
 const chalk     = require('chalk')
 const emoji     = require('node-emoji')
-const npmRun    = require('npm-run')
 
 const iconsTask = function() {
 
@@ -21,12 +20,6 @@ const iconsTask = function() {
 
     /*
     @TODO: try to implement SVGSON directy to the icon task!
-    npmRun.exec('svgson -i ../../01-src/icons -t -p', function (err, stdout, stderr) {
-        // err Error or null if there was no error
-        // stdout Buffer|String
-        // stderr Buffer|String
-        console.log(stdout);
-    })
     */
 
     return gulp.src([paths.src, '*!README.md'])
